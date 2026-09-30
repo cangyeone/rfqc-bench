@@ -1,0 +1,26 @@
+[
+  {
+    "source": "rf_quality_control/baselines_20260929/src/models.py",
+    "source_sha256": "e6febca99bb15e68a34e4fac6a9d35616f895d521db550f73ba425f8a61f4f47",
+    "destination": "src/rfqc_bench/models/literature.py",
+    "change": "Package module; preserved backbone implementations; omitted old workflow wrapper."
+  },
+  {
+    "source": "rfqc_benchmark_20260929/src/models.py",
+    "source_sha256": "9fcba81c817c5d7f1dbc237f5f53a94295a4a487440349af62e9b822b7346545",
+    "destination": "src/rfqc_bench/models/extension.py",
+    "change": "Package module; preserved backbone implementations; omitted old workflow wrapper."
+  },
+  {
+    "source": "elastic-wave-structure-emerge/model_definitions/pnsn/models/BRNNPNSN.py",
+    "source_sha256": "655d0dd32f04d137c80e017424d161ac43da71f9edf0089c33f00beefe14ecdf",
+    "destination": "src/rfqc_bench/models/pnsn.py",
+    "change": "Package module; preserved backbone implementations; omitted old workflow wrapper."
+  },
+  {
+    "source": "rf_quality_control/models.py",
+    "source_sha256": "03cd760590e0d883bb4b0408eb0297f7b6eba646fec1f272aad558e80a7ccfe3",
+    "destination": "src/rfqc_bench/models/reference.py",
+    "change": "Package-relative PnSn import; no external source tree or phase-task checkpoint; default scratch initialization."
+  }
+]

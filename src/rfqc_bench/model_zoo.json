@@ -1,0 +1,580 @@
+{
+  "schema": 1,
+  "release": "v0.1.0",
+  "models": [
+    {
+      "name": "gong_cnn",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn-seed20260928.zip",
+      "sha256": "f2b59808624eb32c72cfdb73c89fd009ec9cff2b9d36523a024e2317794da26e",
+      "size_bytes": 51044,
+      "files": {
+        "bundle.json": "0bcce7e32b029d6458a135cda37d7e68476a99dd251b6826a591f576cd0ebe2a",
+        "weights.safetensors": "2f1282439f4783a958f5e4e715217fb3ce49e341fb716f44fb4f9700074857e1"
+      }
+    },
+    {
+      "name": "gong_cnn_bilstm",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn_bilstm-seed20260928.zip",
+      "sha256": "736bb4c43a36b8200189576cbe5eff3f2c3e45102d9178d990563bdb1645bce6",
+      "size_bytes": 52721,
+      "files": {
+        "bundle.json": "ddafa5297b47256c2d45cd8fc58fc671c2041fd4ed83d8dc6c962b43abff775f",
+        "weights.safetensors": "51af010d332b7aa5a683f45193d9e93f20b23bb505a6dcb78b578dd4dfea1b36"
+      }
+    },
+    {
+      "name": "gan_cnn",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan_cnn-seed20260928.zip",
+      "sha256": "38d11087871f34d7ba080065a60d643cf37e65004f73abb1dcd45471f1d02112",
+      "size_bytes": 569208,
+      "files": {
+        "bundle.json": "6eff90625f022ac7ecb0eed42435642f422fba6c8cd628f117e45fadb28f81c4",
+        "weights.safetensors": "f21cd20a7f980475d1a899a80f51115cb3a547c6272eed6268b25086ca1e56a3"
+      }
+    },
+    {
+      "name": "deeprfqc",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/deeprfqc-seed20260928.zip",
+      "sha256": "be4817bec098695d4bccbd35576a1ea4f111351dd70c605e1e99f1301efbd3f2",
+      "size_bytes": 5901136,
+      "files": {
+        "bundle.json": "40973e9fce4d6a1a6c15685ebf35bdb2aba59e85704014cc69bc9b93f1560881",
+        "weights.safetensors": "fddc9efac7279ac89aa9bb1e5a19ddc8decd03c7529741d268368ef30c075a02"
+      }
+    },
+    {
+      "name": "hegaz_capsule",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/hegaz_capsule-seed20260928.zip",
+      "sha256": "849ecbdf591e3b24de716a3b97ded334fe6d9f75b42e2fd24a8e4ccd1f5ba837",
+      "size_bytes": 3829203,
+      "files": {
+        "bundle.json": "f1ba0fe073ac79459fa7a72cd9b0087748e76703046232568aa28d04bcff0e37",
+        "weights.safetensors": "f656040fd6581f4fa5525cbe5c338e9f00bba9c6c21f678aa5c8ea34eec05469"
+      }
+    },
+    {
+      "name": "li2021_cnn",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/li2021_cnn-seed20260928.zip",
+      "sha256": "235706812b050d1d83d6df7fb7e7910f572770c7baf0a7e034d32b2a09136180",
+      "size_bytes": 1969742,
+      "files": {
+        "bundle.json": "3a8e9aaa4d63223468b6683383994d487e4aefe30c84dc2be2b929a6c1a9b0fc",
+        "weights.safetensors": "234d97338da806f0523655352d57054ea9ab834cc6d81f6c950cea57064a4520"
+      }
+    },
+    {
+      "name": "gan2021_cnn",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan2021_cnn-seed20260928.zip",
+      "sha256": "05eeceaa6a48fb77574521705384f43a7a16b050a6d0848184b1aa63512b538e",
+      "size_bytes": 3025675,
+      "files": {
+        "bundle.json": "bda41a635ceeb366474cb56e20e4b49417ecd39a1c3ee36c8e0df9ea570907e1",
+        "weights.safetensors": "8a857d2ca5a98270a9ba8a3dfd713256e6d99df76948868c215a92cda6ac2836"
+      }
+    },
+    {
+      "name": "chen2026_image",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/chen2026_image-seed20260928.zip",
+      "sha256": "6806f9ec4a50a329aa52196111f2302d668c51f0612c995e1221aac58ec73daf",
+      "size_bytes": 213700627,
+      "files": {
+        "bundle.json": "b26e01690d98fba568c8902eeb6ea37cc9bb341aaba600ab10c049442a2f664d",
+        "weights.safetensors": "5b031baa82e141f51c63fce136c9894ae05498f7e75146786789af9cd9df357d"
+      }
+    },
+    {
+      "name": "reference_ag3",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_ag3-seed20260928.zip",
+      "sha256": "40c353297c6282757fa8071f4d254277075460195afadce71775187b887e4c1c",
+      "size_bytes": 1469070,
+      "files": {
+        "bundle.json": "3fee7a34374098360e0a1798dc4cdde9c1b7921b0e469ed0cc04c3cd2ecef062",
+        "weights.safetensors": "033173b35a290e396070511c03ba6cadfc26ac86a342750b01c2dc6de25b492f"
+      }
+    },
+    {
+      "name": "reference_multifilter",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_multifilter-seed20260928.zip",
+      "sha256": "f803ccc0df73885868e044d6a4ebcf72731bc0929347580ffaea990affd74c26",
+      "size_bytes": 1469191,
+      "files": {
+        "bundle.json": "7c041f93a5bfa4e772b93cbdcf462c76cea744f984eebfeee25cd6c8520977ae",
+        "weights.safetensors": "bc62713fe2f251537bb5372ff82f8874bed907a806de6e0bdf93228cef13e08d"
+      }
+    },
+    {
+      "name": "descriptors_ag3",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_ag3-seed20260928.zip",
+      "sha256": "ab4c516cf44001515c232b31094f6eb6e27a7f141ba09b967c72f777985d04f3",
+      "size_bytes": 123087,
+      "files": {
+        "bundle.json": "cb708eeb05af874c40a01644b982bdea14548e071d47a03894b478265e467ff7",
+        "weights.safetensors": "33ca0b3645b5e6b26a4b79b02448d90c890c47c5a94d1c96aca050a11e4215a9"
+      }
+    },
+    {
+      "name": "descriptors_multifilter",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_multifilter-seed20260928.zip",
+      "sha256": "6c40bb458ad9ad34f3f5fe281481f75c92bd3ef4491198b3f3e5f60f5cccdaf9",
+      "size_bytes": 124111,
+      "files": {
+        "bundle.json": "92f22803ef17a95ac92a95202aefabbdb84455eba294c3fafff1f54e6be705d6",
+        "weights.safetensors": "b600342526c6ac53ae6446e970207cc650ce3a00ea3799bc925a46de038c5bd2"
+      }
+    },
+    {
+      "name": "combined_ag3",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_ag3-seed20260928.zip",
+      "sha256": "0f106dff075b49633f41c758c72fffadca0db839aec91ea820b55e87a830ffa5",
+      "size_bytes": 1479616,
+      "files": {
+        "bundle.json": "3e2dc401d6cdf6e2ad8083cacb8ca6b1a4587d1be59656dbef6c83e336283167",
+        "weights.safetensors": "f67500fa600704d91729c2147fc7d73b87c9914aabc50b9db8be544b86519b7f"
+      }
+    },
+    {
+      "name": "combined_multifilter",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_multifilter-seed20260928.zip",
+      "sha256": "05a640e515242b72a4aecbe7a420ca1de6811d2f34421c1adb8794aebeb0c2a3",
+      "size_bytes": 1476245,
+      "files": {
+        "bundle.json": "3611bbaf8c09262db0bcde594ef978d22ef5a8f82d6fe0b86f28056d1acfa2c8",
+        "weights.safetensors": "e5309048a46aa39da8eef02f732163d8271d94f220289216d8f1f9ad7e96b817"
+      }
+    },
+    {
+      "name": "xiong2025_fcm",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/xiong2025_fcm-seed20260928.zip",
+      "sha256": "7e2ab6bc79e72294a924337a23b231f1dc2f94e12b33ed27412ae488072a4b3a",
+      "size_bytes": 863,
+      "files": {
+        "bundle.json": "369027c1665103f8521b2625af3e2b44bd2facadf863c4aaa0a29b3c2c3a2e3e"
+      }
+    },
+    {
+      "name": "logreg_ag3",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_ag3-seed20260928.zip",
+      "sha256": "9a96f9cd6fbcf31ef5a0e94e293ab29788e92d1a7bf6541974db6f4901c67d4b",
+      "size_bytes": 911,
+      "files": {
+        "bundle.json": "e2dbb21141506760cdd9650c7761582160921256fbd4fcd4359ca4ea3828fe2a"
+      }
+    },
+    {
+      "name": "logreg_multifilter",
+      "seed": 20260928,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_multifilter-seed20260928.zip",
+      "sha256": "ddc773f1335100205bbb0bbe8630ee027caa347bfc77c979f3d574ea748f1f71",
+      "size_bytes": 1649,
+      "files": {
+        "bundle.json": "7a6cd82b00bc77c0936dbbc92afcba611ba4166b399f6134b90c073fd8a6be0c"
+      }
+    },
+    {
+      "name": "gong_cnn",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn-seed20260929.zip",
+      "sha256": "090ce8456db07dbba767cf781e25aa6a6a1a8cbc64bf41f7363eb036e3644ef7",
+      "size_bytes": 51024,
+      "files": {
+        "bundle.json": "d169b34e247a0e260c5f62ae3ab7a9d009c1ba53ec3a68d7e175f0adef96c571",
+        "weights.safetensors": "7bd6af2ed2ba2c7b1c5e873d69cf69d1879224815379754a4048bc0cfada417d"
+      }
+    },
+    {
+      "name": "gong_cnn_bilstm",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn_bilstm-seed20260929.zip",
+      "sha256": "6143e8031519f376a1554adb009049b3e7885a37b8de4ef68904a4d6431d3ec1",
+      "size_bytes": 52687,
+      "files": {
+        "bundle.json": "a2139b5248ba9c1c65e8289c8c876cfa3d5e0b65249e5771fe03b59d7c72af30",
+        "weights.safetensors": "fa744d2ef0cb14fbba40236e13bdc07fbf4d5ed8252f7e218a202ddc028e381f"
+      }
+    },
+    {
+      "name": "gan_cnn",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan_cnn-seed20260929.zip",
+      "sha256": "0c1fa1e0ed4dc284c7491a5704a59acabf91610f7d9f49af3a1cc220e8ef271b",
+      "size_bytes": 569371,
+      "files": {
+        "bundle.json": "c0812906ef7e77a220bbbde962ac9dd8cde0bfb91bca8edfd970217005c8dc72",
+        "weights.safetensors": "bf5e9d3eebcc1f5f70baec3812174591156bb35978a760bd40d3a21a1c95c14a"
+      }
+    },
+    {
+      "name": "deeprfqc",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/deeprfqc-seed20260929.zip",
+      "sha256": "b4247e86edc5c2618963c33cb74cf5231f15b1354df763cf60a039f1227bdc6f",
+      "size_bytes": 5900667,
+      "files": {
+        "bundle.json": "515c724bb0e08cdc33acae7a42dee4745c35869a2e400c2d2c89839ddc821eae",
+        "weights.safetensors": "0cb3e0803e7d0f22bac609041a43d23cbfdf3f3767e52c610d9ef9e36de67650"
+      }
+    },
+    {
+      "name": "hegaz_capsule",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/hegaz_capsule-seed20260929.zip",
+      "sha256": "d00e553fd1b48d651adf1008e7d4f29304a02ff31cffbe267dfe9bfd6165c608",
+      "size_bytes": 3828920,
+      "files": {
+        "bundle.json": "a845c390cb53f31093812495ed5f34d223727fb899db850343fe7785b1cc62f1",
+        "weights.safetensors": "81c9a48a252da31c96dafc17f938732350696bc305f22dcafb914043f56d7c0e"
+      }
+    },
+    {
+      "name": "li2021_cnn",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/li2021_cnn-seed20260929.zip",
+      "sha256": "9626cde6f16ee55b3936ea849855b1dd67da1c73023693e0481f3bef92f9ec60",
+      "size_bytes": 1970094,
+      "files": {
+        "bundle.json": "ff75c77c3b2c6dbc33cfd36b0d1a00b78e6ee6425b0b3d79ef97f46e1fe3c700",
+        "weights.safetensors": "26a574207ef66cfc1804e91a0f5fc3e6b56e93abd38549c580ddc29f64a2a0a1"
+      }
+    },
+    {
+      "name": "gan2021_cnn",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan2021_cnn-seed20260929.zip",
+      "sha256": "a2aaba506b8b36f5bdd77807b630b7e8248fdeff2af4da7194e7f27fc408a6f5",
+      "size_bytes": 3021882,
+      "files": {
+        "bundle.json": "7ab1a869d104b2e52f04ac332191d846ad7f7a8b3efb0d665a240b37e74b00cf",
+        "weights.safetensors": "59db9c56f9eed02d57ebc4eb5be3d10b3865211767c422c9b7676e47a649dd75"
+      }
+    },
+    {
+      "name": "chen2026_image",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/chen2026_image-seed20260929.zip",
+      "sha256": "bf71a00913386f2f0baf4f6cca00868551be6cae16c5eb660b401861c70baa60",
+      "size_bytes": 213659910,
+      "files": {
+        "bundle.json": "7fcf0ce999a53c002502b0bd1ceff393177add2e0610180ad71b76f134bbe68c",
+        "weights.safetensors": "ad927c8238f8d9dcc3b8bb4cd2273ad704d3326fb4cd66cc8a46e63fa706b4de"
+      }
+    },
+    {
+      "name": "reference_ag3",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_ag3-seed20260929.zip",
+      "sha256": "5467ea339d55f67dc7295872977f0ee80ccca3f36e1c1587b70aae3a957c656d",
+      "size_bytes": 1471605,
+      "files": {
+        "bundle.json": "03c52cfb9394b469c8c77de89d8c0742c52d268d43f77772cc79c371efc3eef8",
+        "weights.safetensors": "3548cc837512073048f6d74b6eda81f418f71391f16171eb9781eefab9d002c7"
+      }
+    },
+    {
+      "name": "reference_multifilter",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_multifilter-seed20260929.zip",
+      "sha256": "ed3aaabc665e39108186f1a67259403822b57e251ed79d6157fccb74165c85be",
+      "size_bytes": 1472522,
+      "files": {
+        "bundle.json": "9b1a117c4e79b664efbfc6eef75324fa13171f2f67ef79927bab1c609edd5f5e",
+        "weights.safetensors": "f7a88b00e679271dead60a7c2a46d332703b8dd172689eca120b4f4aac3b9592"
+      }
+    },
+    {
+      "name": "descriptors_ag3",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_ag3-seed20260929.zip",
+      "sha256": "9139fc633b9cb50d148a5d16bbdc4326409d25a339f73e706a30234a34f001ee",
+      "size_bytes": 123157,
+      "files": {
+        "bundle.json": "7c76ab0942658ba0bece2e87cc2ce1e68dcf3a4fae524ef77058a3882f1e121b",
+        "weights.safetensors": "dbc3a86cb0a276d6c8c390f1377c295cbfc0e4ea7a7485d5bd2a0084452babc0"
+      }
+    },
+    {
+      "name": "descriptors_multifilter",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_multifilter-seed20260929.zip",
+      "sha256": "5ec52e03263d8264518aba1b0399257436e7fcb40a92406b3f534a1562158080",
+      "size_bytes": 124128,
+      "files": {
+        "bundle.json": "751c8c82916e6121c9fe4876f8303750aec96441ec7be3727b11a2b986bb8f0f",
+        "weights.safetensors": "bb00d9695435c836940e18afb51ac1b6d8c745fbb937f23f543ea3f2381cd43f"
+      }
+    },
+    {
+      "name": "combined_ag3",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_ag3-seed20260929.zip",
+      "sha256": "209ce524c31bdea255afc525f10464dc28fb06b7a150792b49a2a16a4e2d3b5b",
+      "size_bytes": 1478104,
+      "files": {
+        "bundle.json": "34f64e355f243883c759e2cfd710892ae8744748227aa824f943d959c76b909b",
+        "weights.safetensors": "8087e986be3ed1ee88f7718b249db82c5046a7525de15ed42b7fc63a618ad178"
+      }
+    },
+    {
+      "name": "combined_multifilter",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_multifilter-seed20260929.zip",
+      "sha256": "57a3d34f11d5a8487fcea7640a2485e3b6a7c4cc8ed30405b6870846fe19fddb",
+      "size_bytes": 1479248,
+      "files": {
+        "bundle.json": "eadbcaac2f016d8eecab240ebfefc859de88d2ca814640fbdaa0d6851907d7f8",
+        "weights.safetensors": "747538ef4d62e78a53b49666c32669a2e6979e96274d3edc0e77eaf938a12386"
+      }
+    },
+    {
+      "name": "xiong2025_fcm",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/xiong2025_fcm-seed20260929.zip",
+      "sha256": "c2908ba888a748c3ea74eacbb9b2d93795f604c250dc939a5ab3a9ced65a68de",
+      "size_bytes": 859,
+      "files": {
+        "bundle.json": "c23063344dcc895bc0ab5aeaca596c203191c1f7f0ba2a76d163bc36aa7919fb"
+      }
+    },
+    {
+      "name": "logreg_ag3",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_ag3-seed20260929.zip",
+      "sha256": "2cce278fc9149dce36db6b831f01a1d8f9cda97853c57ae9bdbe7a7af0a01088",
+      "size_bytes": 905,
+      "files": {
+        "bundle.json": "03406a6e5a58dd24129f351eeddc60ff71dd22e577944be2806193b5f192269e"
+      }
+    },
+    {
+      "name": "logreg_multifilter",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_multifilter-seed20260929.zip",
+      "sha256": "eb3687f9bde9671a17348360598df24333164b51ebd4386764c7e56596a6c6d1",
+      "size_bytes": 1649,
+      "files": {
+        "bundle.json": "99a067826b9d9cc5c489244f6448ddbd7010923e3645fd4844a50d618e524666"
+      }
+    },
+    {
+      "name": "gong_cnn",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn-seed20260930.zip",
+      "sha256": "9093cb7508a78ac4829d43b91ec7330f10d225a8bb15e0218018a508e565b9a1",
+      "size_bytes": 51048,
+      "files": {
+        "bundle.json": "7719f0f2741ee2a9d80334b940e5bf4816b36d641229067a9a65cf37028186c0",
+        "weights.safetensors": "68f47c0d000b0a761290810fbcf5ca0da9e37ce85c6d73f79a45f1a323ab4f5c"
+      }
+    },
+    {
+      "name": "gong_cnn_bilstm",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gong_cnn_bilstm-seed20260930.zip",
+      "sha256": "cf3a958e58a0e6ac86ec01541e36c32acad54bd4ae1427ed032ab8a858be7791",
+      "size_bytes": 52738,
+      "files": {
+        "bundle.json": "d5db89bd909b758fb5effbeed9661e052798d3c66fe05bbdbcb84e84acbaf68f",
+        "weights.safetensors": "a617109a5ce9f452437c9fd36a2426540d21a1134bc2e49e530f70338fef5213"
+      }
+    },
+    {
+      "name": "gan_cnn",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan_cnn-seed20260930.zip",
+      "sha256": "f8d770bc2df21d6ed7ecf71aa7621fa2a00ed49ae4eb7975c96c78046a796c74",
+      "size_bytes": 569302,
+      "files": {
+        "bundle.json": "c1a293f82373e2d75bc480a5667cdb5e6820ed33b207ec3c51cd39f0dc73af66",
+        "weights.safetensors": "7c6c579e87f5e5fbbdec0a12bae9cb895d9b24d5e0940e6000d16810b77f74b1"
+      }
+    },
+    {
+      "name": "deeprfqc",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/deeprfqc-seed20260930.zip",
+      "sha256": "44443005758e694d46fae02e6492360bfa04ca8049fe5bacf94649a21d7c37f4",
+      "size_bytes": 5899909,
+      "files": {
+        "bundle.json": "c4e9b3c9da6571bbfac4ef26c1f2c21de52077aa00347b44a369f17b063be384",
+        "weights.safetensors": "36d13ed0dcfd76d49e9a3517f768c56322e8d0d50c184f7701d04639d6f6d2a6"
+      }
+    },
+    {
+      "name": "hegaz_capsule",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/hegaz_capsule-seed20260930.zip",
+      "sha256": "65fc6e96f360c43747a011906a26457157e15671236611fc604cf4d1cc1241d1",
+      "size_bytes": 3828344,
+      "files": {
+        "bundle.json": "10a42227fa8628c0d4073e0b968c22edb17188ed172a7a0141c98918f3c569bd",
+        "weights.safetensors": "10c6bbf33effe81e099f77e447272e191eed7ec8e0a5cfbd4d2c757539039428"
+      }
+    },
+    {
+      "name": "li2021_cnn",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/li2021_cnn-seed20260930.zip",
+      "sha256": "ba73800f9a45f34f7cf8d080a206624517101df337a91c714fa055d6b79bca6f",
+      "size_bytes": 1970258,
+      "files": {
+        "bundle.json": "7e4313830d299b0d26796f45384bddf885f11a564bea2e1d7e02a44e69429f8d",
+        "weights.safetensors": "ed8bfbc0d043741bdf5d1a6bc89a46fd20624d82624b8c0ead4e556b07c0c467"
+      }
+    },
+    {
+      "name": "gan2021_cnn",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/gan2021_cnn-seed20260930.zip",
+      "sha256": "2c19584df03c9b88bf72b4fbcc957caac7149b5dc113f6bfc9e8cc205140b857",
+      "size_bytes": 3021491,
+      "files": {
+        "bundle.json": "a8fed4af04454a03de0716a9908650e366b777903528f8789e7e2d2538ef17c9",
+        "weights.safetensors": "4bbfd1732030bfd077888caa33aae379564ab8bd14eb2e877ad083ed0fa7630e"
+      }
+    },
+    {
+      "name": "chen2026_image",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/chen2026_image-seed20260930.zip",
+      "sha256": "2c2cc48f1fcc2c4830af54029427fa5208950a4f96fc93c0ed68993406dce729",
+      "size_bytes": 213724818,
+      "files": {
+        "bundle.json": "0bba936953618455022eca674543993e897cd347cbeaafc2d89c2809df702d78",
+        "weights.safetensors": "42eb46102c9dd27022d03e0248a13ea90b717fddc913a06d6023e2fa32dfba0d"
+      }
+    },
+    {
+      "name": "reference_ag3",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_ag3-seed20260930.zip",
+      "sha256": "6ec3b8af26a70b2689b2dda60d320620be2c337216bc242aa69774aa23db2039",
+      "size_bytes": 1468985,
+      "files": {
+        "bundle.json": "d042e4a551a16c3b74e633b3af7f590cb475d6e78d12f5c81068817c27c0382a",
+        "weights.safetensors": "afba7f51c75e566e71a9a532b5e72edf3af8d4997b284078ee58dd355bb6d191"
+      }
+    },
+    {
+      "name": "reference_multifilter",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_multifilter-seed20260930.zip",
+      "sha256": "613027b212e2a2ef83ce794e9a1c34905698a425bbbc18e32298e917f9e972cb",
+      "size_bytes": 1471197,
+      "files": {
+        "bundle.json": "e3f5b4436ef4e3ef525d4f038e36637584aaa1da0060e1e71ee1c328bc1a908b",
+        "weights.safetensors": "446143eb70c20d64ad60692b3f29a98621754e52fba29327e515ac732ab1d77b"
+      }
+    },
+    {
+      "name": "descriptors_ag3",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_ag3-seed20260930.zip",
+      "sha256": "2f09eb5ef6215c4b7f7ceae0d3835b3725951751118c42dfff9b9f5e375c636f",
+      "size_bytes": 123175,
+      "files": {
+        "bundle.json": "6081a3dada6d7b400796b719107ecbf8afb4bc6fe683749b46ba3794bd239b24",
+        "weights.safetensors": "e27069e260ae7d9251cfee8258f8b1d92e00e8703fde84ee4d04047f6a17fc62"
+      }
+    },
+    {
+      "name": "descriptors_multifilter",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/descriptors_multifilter-seed20260930.zip",
+      "sha256": "d5e99f2bb4981466fe7edb433f873ca4912b8c7ad76a9aecc70c83613a03df90",
+      "size_bytes": 124118,
+      "files": {
+        "bundle.json": "a7e746e090999b6be3137407bf8ee557a46a50b876acaa86adffe8141574f781",
+        "weights.safetensors": "e8ccaad2407106c75335fa0be52ab87eec3f712624c1e7757fb5576ab18157e8"
+      }
+    },
+    {
+      "name": "combined_ag3",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_ag3-seed20260930.zip",
+      "sha256": "4e472af0296a2464e83db76de561acd47994f42d7a5f2e027e7dacc79d7a788a",
+      "size_bytes": 1475485,
+      "files": {
+        "bundle.json": "c7d93578ff36d3118413b029352fee72e2fcae34bc9d515dc1e70d4c7cf05ae9",
+        "weights.safetensors": "ce5598e72c19ee07e3bf2a9bf03da34c6092af6def7c7d8cfc707d393a8a4edf"
+      }
+    },
+    {
+      "name": "combined_multifilter",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/combined_multifilter-seed20260930.zip",
+      "sha256": "6670ebce9f848952819690353102dbd984808f4393a3c0c2b74d03455b3b2acf",
+      "size_bytes": 1476564,
+      "files": {
+        "bundle.json": "e13ef2263fddfc901cfb273e6a1978ca290e96a5ee7a430c15ec76a4ddfad37f",
+        "weights.safetensors": "46df8c2dabf60855a720fb7a80dea701dae5056ca9cf5d8f264f5c1749dd51a5"
+      }
+    },
+    {
+      "name": "xiong2025_fcm",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/xiong2025_fcm-seed20260930.zip",
+      "sha256": "0cc5a9bda79f5db00930918fc3664b87ba3a2659bb34c42f00e2f08a53ebc46a",
+      "size_bytes": 859,
+      "files": {
+        "bundle.json": "0f3338e821d9946c83f31f52223fbf6da6651cf4e69caa74b28561ac144ec421"
+      }
+    },
+    {
+      "name": "logreg_ag3",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_ag3-seed20260930.zip",
+      "sha256": "2d77a85b7965a261a9ea64311a3ca62f34c251265e85f0f8ac0f1f5194f594f0",
+      "size_bytes": 909,
+      "files": {
+        "bundle.json": "ddac62e4b6845a1cba1dff3bb5b49049eaf251db3cb3404cb82272dfe094c2b7"
+      }
+    },
+    {
+      "name": "logreg_multifilter",
+      "seed": 20260930,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/logreg_multifilter-seed20260930.zip",
+      "sha256": "2d7381b5a5620bcdaed3f28cecd6f98c79f969295178f7ba2a61bc162b65c5d8",
+      "size_bytes": 1649,
+      "files": {
+        "bundle.json": "36bcb045fbabbe61249166869634c7e838c81e02a33b470fc6ca377bce88654a"
+      }
+    },
+    {
+      "name": "reference_ag1",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_ag1-seed20260929.zip",
+      "sha256": "6057d9f540fb2a3ef001b2131203193a96179c036214f4017118dc865f2bd892",
+      "size_bytes": 1475053,
+      "files": {
+        "bundle.json": "0f88bb76b9dc06be00aac4885c95ebfa49ab5ee1206c30de93bba6cf27e4fe6e",
+        "weights.safetensors": "9313af49bed6533904a602b4242704f7f34e00f93a1d132ee951cb651dd148cf"
+      }
+    },
+    {
+      "name": "reference_ag5",
+      "seed": 20260929,
+      "url": "https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/reference_ag5-seed20260929.zip",
+      "sha256": "51bf7008034933fdc59512cb3e2cde32f7a1fca570692b0a65a4766cb506c08d",
+      "size_bytes": 1472116,
+      "files": {
+        "bundle.json": "d39c1614214909148d064291f3e7766ed48dc7ab2292900b01e5d8832c40be64",
+        "weights.safetensors": "1837069d6968ae4f82189206796a1ac9fce5d8bbad479b6291e2f0fdebaad90d"
+      }
+    }
+  ]
+}

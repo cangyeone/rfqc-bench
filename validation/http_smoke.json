@@ -1,0 +1,12 @@
+{
+  "health": {
+    "status": "ok",
+    "version": "0.1.0",
+    "model": "gong_cnn",
+    "seed": 20260928
+  },
+  "post_predict_passed": true,
+  "openapi_passed": true,
+  "input": "runtime-generated synthetic data only",
+  "records": 2
+}

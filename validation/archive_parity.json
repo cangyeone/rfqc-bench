@@ -1,0 +1,543 @@
+{
+  "schema": 1,
+  "models_verified": 53,
+  "observed_data_distributed": false,
+  "torch_validation": "2.11.0",
+  "device": "cpu",
+  "initial_cross_platform_tolerance": 0.0001,
+  "acceptance": "Package vs original code on the same CPU <=1e-7; statistical archive replay <=1e-10. Cross-platform drift is separately retained, including failures of the initial 1e-4 tolerance.",
+  "sample_selection": "128 evenly spaced positions in each ordered archive, or the full test set for same-station FCM context",
+  "scope": "Deployment consistency check, not new accuracy estimates or a re-evaluation of model selection",
+  "checks": [
+    {
+      "method": "gong_cnn",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 7.891654968261719e-05,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gong_cnn_bilstm",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00011052191257476807,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan_cnn",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00022011995315551758,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "deeprfqc",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00024902820587158203,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "hegaz_capsule",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0003230571746826172,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "li2021_cnn",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00023764371871948242,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan2021_cnn",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0002593100070953369,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "chen2026_image",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0002631545066833496,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_ag3",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0008057653903961182,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_multifilter",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0006865262985229492,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_ag3",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00023379921913146973,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_multifilter",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00035309791564941406,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_ag3",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0010471940040588379,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_multifilter",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0010498762130737305,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "xiong2025_fcm",
+      "seed": 20260928,
+      "records_compared": 24533,
+      "max_absolute_score_error": 5.551115123125783e-16,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": true
+    },
+    {
+      "method": "logreg_ag3",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "logreg_multifilter",
+      "seed": 20260928,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "gong_cnn",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 9.369850158691406e-05,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gong_cnn_bilstm",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00011616945266723633,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan_cnn",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00024300813674926758,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "deeprfqc",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00040772557258605957,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "hegaz_capsule",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.000774875283241272,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "li2021_cnn",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00043958425521850586,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan2021_cnn",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00012981891632080078,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "chen2026_image",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00011980533599853516,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_ag3",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0004450082778930664,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_multifilter",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00023411214351654053,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_ag3",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00015348196029663086,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_multifilter",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00020833313465118408,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_ag3",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0003604292869567871,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_multifilter",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00039749592542648315,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "xiong2025_fcm",
+      "seed": 20260929,
+      "records_compared": 24533,
+      "max_absolute_score_error": 4.996003610813204e-16,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": true
+    },
+    {
+      "method": "logreg_ag3",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "logreg_multifilter",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "gong_cnn",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00021082162857055664,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gong_cnn_bilstm",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00011703372001647949,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan_cnn",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0002740025520324707,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "deeprfqc",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00036078691482543945,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "hegaz_capsule",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.003646247088909149,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "li2021_cnn",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00021713972091674805,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "gan2021_cnn",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0001576542854309082,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "chen2026_image",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00011587142944335938,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_ag3",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0009848475456237793,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_multifilter",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0009210705757141113,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_ag3",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0002734065055847168,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "descriptors_multifilter",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00017774105072021484,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_ag3",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.004481911659240723,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "combined_multifilter",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.00030481815338134766,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "xiong2025_fcm",
+      "seed": 20260930,
+      "records_compared": 24533,
+      "max_absolute_score_error": 6.106226635438361e-16,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": true
+    },
+    {
+      "method": "logreg_ag3",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "logreg_multifilter",
+      "seed": 20260930,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": true,
+      "original_cpu_vs_package_max_error": null,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_ag1",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0018889307975769043,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    },
+    {
+      "method": "reference_ag5",
+      "seed": 20260929,
+      "records_compared": 128,
+      "max_absolute_score_error": 0.0004697144031524658,
+      "archived_decisions_changed": 0,
+      "cross_platform_within_initial_tolerance": false,
+      "original_cpu_vs_package_max_error": 0.0,
+      "full_station_context": false
+    }
+  ]
+}
