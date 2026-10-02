@@ -1,0 +1,60 @@
+{
+  "version": "0.1.1",
+  "date": "2026-10-02",
+  "source_paper_commit": "b88a6c13f6ae378d9b276bd19dcb4789af3c446d",
+  "environment": {
+    "python": "3.14.4",
+    "torch": "2.11.0",
+    "platform": "Darwin",
+    "device": "cpu"
+  },
+  "pytest": {
+    "passed": 34,
+    "warnings": 1,
+    "warning": "Existing Starlette/httpx deprecation warning"
+  },
+  "snapshot": {
+    "passed": true,
+    "source_files_hashed": 92,
+    "original_fits": 51,
+    "appended_seed_fits": 20,
+    "cross_protocol_fits": 6,
+    "frequency_fits": 2,
+    "timing_records": 57,
+    "paired_seed_contrasts": 6,
+    "raw_data_included": false,
+    "scope": "Aggregate means/SDs/paired t intervals, confusion-count F1, label agreement and raw-duration summaries verified; no recomputation of per-record accuracy or station-bootstrap draws without data."
+  },
+  "public_manifest_sha256": "9cd196c4c0c889d566ced2621320cc4ae9b22dbfbfd0bbd40d722e8dd5b5bc79",
+  "installed_wheel_checks": {
+    "version": "0.1.1",
+    "outside_source_import": true,
+    "single_round_cli": true,
+    "fresh_process_models": [
+      "gong_cnn",
+      "logreg_ag3",
+      "xiong2025_fcm"
+    ],
+    "fresh_process_rounds": 6,
+    "hash_verified_resume": true,
+    "own_data_accuracy_models": 3,
+    "synthetic_records": 64,
+    "neural_and_logreg_timing_pool": 32,
+    "fcm_timing_pool": 64,
+    "dependencies": "Wheel installed with --no-deps --target; dependencies reused from the existing Python environment. Not a clean dependency-resolution test."
+  },
+  "unchanged_model_source_files": [
+    "src/rfqc_bench/model_zoo.json",
+    "src/rfqc_bench/preprocessing.py",
+    "src/rfqc_bench/fcm.py",
+    "src/rfqc_bench/predictor.py",
+    "src/rfqc_bench/models/__init__.py",
+    "src/rfqc_bench/models/extension.py",
+    "src/rfqc_bench/models/literature.py",
+    "src/rfqc_bench/models/pnsn.py",
+    "src/rfqc_bench/models/reference.py"
+  ],
+  "model_catalog_sha256": "883a241150ecab998eb6e919e28adc981f8cf3921be3b14d769f7ac7eb2a61db",
+  "data_policy": "No observational waveforms, label vectors, station/sample catalogs or per-record predictions. Public aggregates and duration arrays only.",
+  "scope": "v0.1.1 portable runner verified with synthetic CPU smoke tests; paper RTX 5090 timing records come from the original v0.1.0 experiment. No new training, no H-k publication, no promise of cross-device numerical identity."
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "source_files_hashed": 92,
+  "original_fits": 51,
+  "appended_seed_fits": 20,
+  "cross_protocol_fits": 6,
+  "frequency_fits": 2,
+  "timing_records": 57,
+  "paired_seed_contrasts": 6,
+  "raw_data_included": false,
+  "scope": "Aggregate means/SDs/paired t intervals, confusion-count F1, label agreement and raw-duration summaries verified; no recomputation of per-record accuracy or station-bootstrap draws without data."
+}

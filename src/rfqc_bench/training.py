@@ -26,9 +26,10 @@ from .registry import get_spec
 
 
 def save_bundle(output,method,seed,threshold,preprocessing,network=None,parameters=None,training=None):
+    from . import __version__
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     bundle=dict(schema=1,method=method,seed=int(seed),threshold=float(threshold),
-                software_version='0.1.0',license='GPL-3.0-only',source_repository='https://github.com/cangyeone/rfqc-bench',
+                software_version=__version__,license='GPL-3.0-only',source_repository='https://github.com/cangyeone/rfqc-bench',
                 preprocessing=preprocessing,parameters=parameters,training=training or {},
                 input_grid=dict(samples=501,start_time=-10.,sampling_interval=.1),
                 labels={'bad':0,'good':1})

@@ -18,7 +18,8 @@ archived predictions for the manuscript's reported scores.
 
 [中文入门](docs/QUICKSTART_zh.md) · [Python API](docs/API.md) ·
 [Input format](docs/DATA.md) · [Training](docs/TRAINING.md) ·
-[HTTP deployment](docs/DEPLOYMENT.md) · [Methods](docs/METHODS.md)
+[HTTP deployment](docs/DEPLOYMENT.md) · [Methods](docs/METHODS.md) ·
+[Comparison tables](benchmarks/2026-10-02/generated/COMPARISON.md) · [测速与复现](docs/BENCHMARK_zh.md)
 
 ## Install with pip
 
@@ -26,14 +27,14 @@ Python 3.10 or newer. Use a virtual environment. The versioned GitHub wheel does
 not require Git:
 
 ```bash
-python -m pip install https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.0/rfqc_bench-0.1.0-py3-none-any.whl
+python -m pip install https://github.com/cangyeone/rfqc-bench/releases/download/v0.1.1/rfqc_bench-0.1.1-py3-none-any.whl
 rfqc-bench doctor
 ```
 
 Alternatively, install the tagged source (requires Git), with HTTP support:
 
 ```bash
-python -m pip install "rfqc-bench[api] @ git+https://github.com/cangyeone/rfqc-bench.git@v0.1.0"
+python -m pip install "rfqc-bench[api] @ git+https://github.com/cangyeone/rfqc-bench.git@v0.1.1"
 ```
 
 For development: `python -m pip install -e '.[dev]'`. This release is installable
@@ -93,6 +94,33 @@ Open `http://127.0.0.1:8000/docs` for interactive request documentation.
 `POST /predict` accepts waveform arrays, Gaussian coefficients and optional
 descriptors/lengths/stations. It returns probabilities, decisions, model, seed
 and the frozen threshold. See [deployment and curl examples](docs/DEPLOYMENT.md).
+
+## Completed comparisons and inference speed (v0.1.1)
+
+[View all comparison tables](benchmarks/2026-10-02/generated/COMPARISON.md): original
+three-seed classification, eight-seed paired contrasts, label-protocol controls,
+RF waveform diagnostics, single-filter/multi-filter sensitivity, and 19-model
+inference cost. Aggregate tables and raw timing durations are included; no
+observational records or per-record predictions are uploaded. The measured
+paper timings used **v0.1.0**, whose 53 model bundles remain unchanged.
+
+```bash
+# In a clone of this repository; no data/GPU/model downloads needed:
+python scripts/reproduce_comparisons.py
+# On your own data, one timing round with fixed weights:
+rfqc-bench benchmark --model gong_cnn --seed 20260929 --input my_test.npz --output timing.json --device cuda:0 --complete-views
+# All 19 configurations, three fresh-process timing rounds each:
+python scripts/benchmark_models.py --input my_test.npz --output outputs/timing --device cuda:0
+```
+
+For this recorded RTX 5090 / FP32 / batch-32 API workload, Gong-CNN reaches
+13,789 RF/s versus 1,079 for Gong-CNN–BiLSTM. The matched multi-filter reference
+reaches 5,128 RF/s versus 7,421 for AG3. These include preprocessing/transfers,
+not model loading or upstream RF generation. FCM is separately measured on a
+complete station pool. The eight-seed multi-filter accuracy contrast spans zero;
+read [the report](benchmarks/2026-10-02/generated/COMPARISON.md) for all results,
+negative findings and limitations. See [中文操作说明](docs/BENCHMARK_zh.md) for
+own-data evaluation, offline use, timing scope and manual recovery.
 
 ## Train on your own data
 

@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "Please cite the benchmark manuscript and the original model studies listed in docs/METHODS.md."
 title: "RFQC Bench: receiver-function quality-control model APIs"
-version: 0.1.0
-date-released: 2026-09-30
+version: 0.1.1
+date-released: 2026-10-02
 authors:
   - family-names: Yu
     given-names: Ziye

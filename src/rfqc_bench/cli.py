@@ -17,7 +17,7 @@ def main(argv=None):
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('list',help='List every model configuration')
     sub.add_parser('doctor',help='Show installed runtime and available compute devices')
-    for cmd in ['download','predict','demo','serve']:
+    for cmd in ['download','predict','demo','serve','benchmark']:
         c=sub.add_parser(cmd)
         group=c.add_mutually_exclusive_group()
         group.add_argument('--model',default='reference_multifilter')
@@ -31,6 +31,13 @@ def main(argv=None):
         elif cmd=='serve':
             c.add_argument('--host',default='127.0.0.1');c.add_argument('--port',type=int,default=8000)
             c.add_argument('--max-records',type=int,default=4096)
+        elif cmd=='benchmark':
+            c.add_argument('--input',type=Path,required=True);c.add_argument('--output',type=Path,required=True)
+            c.add_argument('--sample-size',type=int,default=512)
+            c.add_argument('--complete-views',action='store_true')
+            c.add_argument('--warmup',type=int,default=10);c.add_argument('--latency-calls',type=int,default=100)
+            c.add_argument('--throughput-calls',type=int,default=32);c.add_argument('--threads',type=int,default=4)
+            c.add_argument('--round-index',type=int,default=0)
     t=sub.add_parser('train');t.add_argument('--model',required=True)
     t.add_argument('--train',type=Path,required=True);t.add_argument('--validation',type=Path,required=True)
     t.add_argument('--output',type=Path,required=True);t.add_argument('--device',default='cpu')
@@ -50,6 +57,20 @@ def main(argv=None):
             trained=fit(a.model,RFData.load(a.train),RFData.load(a.validation),a.output,seed=a.seed,epochs=a.epochs,
                         patience=a.patience,batch_size=a.batch_size,device=a.device,resume=a.resume)
             print(json.dumps(dict(output=str(a.output),model=trained.spec.name,threshold=trained.threshold)));return
+        if a.command=='benchmark':
+            import torch
+            from .benchmarking import benchmark_inference
+            from .io import atomic_json
+            if a.output.exists():raise FileExistsError('Timing output already exists; choose a new file')
+            torch.set_num_interop_threads(1)
+            predictor=_predictor(a)
+            report=benchmark_inference(predictor,RFData.load(a.input),sample_size=a.sample_size,
+                       complete_views=a.complete_views,batch_size=a.batch_size,warmup=a.warmup,
+                       latency_calls=a.latency_calls,throughput_calls=a.throughput_calls,
+                       threads=a.threads,round_index=a.round_index)
+            atomic_json(a.output,report)
+            print(json.dumps(dict(output=str(a.output),method=report['method'],records=report['records'],
+                                  scope='One inference timing round; no accuracy claim or training')));return
         predictor=_predictor(a)
         if a.command=='serve':
             try:

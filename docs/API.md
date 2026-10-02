@@ -74,3 +74,18 @@ peak-normalized; report correlation, NRMSE, operational P/Ps-candidate extrema
 and timing differences. Cross-filter association returns one finite-pair mean
 in 2.5..15 s per record, or `None` if undefined. These are descriptive waveform
 diagnostics, not structural inversion or independent physical ground truth.
+
+## Inference timing (v0.1.1)
+
+```python
+from rfqc_bench import benchmark_inference
+timing = benchmark_inference(model, data, sample_size=512, complete_views=True)
+```
+
+This runs one synchronized timing round with a fixed loaded predictor. It returns
+raw single/batch durations, latency quantiles, API and network throughput, memory
+and environment metadata, without observational arrays or predictions. It does
+not fit weights or thresholds. FCM retains the full station pool and returns only
+pool timing. For repeated fresh-process rounds and full definitions, see
+[BENCHMARK_zh.md](BENCHMARK_zh.md). Timings generated on new hardware are new
+measurements and do not replace the published snapshot.

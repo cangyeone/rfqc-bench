@@ -15,6 +15,16 @@ CSVs; the synthetic tests generate their inputs at runtime.
    sdist and model ZIPs to the corresponding GitHub release. Do not silently
    replace a model asset; change the version and catalog hashes.
 
+## Comparison-only release v0.1.1
+
+The new wheel and source distribution add inference timing and a public
+comparison snapshot. Existing model catalog entries and all 53 weight bundles
+continue to reference the immutable v0.1.0 assets. Do not duplicate, replace or
+retrain these weights when releasing v0.1.1. Aggregate comparison CSVs and timing
+durations are permitted; observational arrays and individual predictions remain
+excluded. Run `scripts/reproduce_comparisons.py` as well as the synthetic tests,
+and preserve `benchmarks/2026-10-02/manifest.json` when packaging the snapshot.
+
 ## Optional PyPI publication
 
 The repository includes a **manual-only** `.github/workflows/publish-pypi.yml`.

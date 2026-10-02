@@ -1,0 +1,7 @@
+contrast,first,second,seed,original_pp,median_pp,lower_pp,upper_pp,contains_zero,interpretation
+input,ours_multiband,ours_ag3,20260928,0.7921498870404831,0.7737294785699178,0.13427216756658505,1.446692765855704,False,separates under this resampling scheme
+input,ours_multiband,ours_ag3,20260929,1.0328244478226778,1.027221764524111,0.4413033826783595,1.7227504456703127,False,separates under this resampling scheme
+input,ours_multiband,ours_ag3,20260930,0.05477452408148009,0.06545228969930261,-0.8823021359422722,0.8834626998920859,True,does not separate at station level
+literature,gong_cnn_bilstm,ours_multiband,20260928,0.06256480823572108,0.1065294062815636,-1.1690220324658507,1.1836905880304502,True,does not separate at station level
+literature,gong_cnn_bilstm,ours_multiband,20260929,-0.2893329132108158,-0.3151658916435762,-1.2727453491424936,0.9238324190597162,True,does not separate at station level
+literature,gong_cnn_bilstm,ours_multiband,20260930,0.45280861956559226,0.4535788565956711,-0.48142263135712626,1.4986561623508918,True,does not separate at station level

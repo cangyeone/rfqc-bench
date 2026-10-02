@@ -4,5 +4,6 @@ recursive-include examples *.py
 recursive-include scripts *.py
 recursive-include tests *.py
 recursive-include validation *.json *.md
+recursive-include benchmarks *.json *.csv *.md *.py *.png
 recursive-include third_party *LICENSE
 global-exclude __pycache__ *.py[cod] .DS_Store

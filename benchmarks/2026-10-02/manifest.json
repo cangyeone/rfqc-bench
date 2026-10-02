@@ -1,0 +1,561 @@
+{
+  "schema": 1,
+  "paper_commit": "b88a6c13f6ae378d9b276bd19dcb4789af3c446d",
+  "title": "Receiver-function quality control on a common task: a benchmark with published baselines and waveform diagnostics",
+  "package_used_for_recorded_timing": "rfqc-bench 0.1.0",
+  "policy": "No observational arrays, manual label vectors, sample/station IDs or per-record prediction vectors; aggregates and raw call durations only.",
+  "files": {
+    "results/original_runs.csv": {
+      "source": "SourceData/benchmark_v1/run_metrics.csv",
+      "source_sha256": "463200fefe23165bf48a3fd2ffea1e1e96fbb9d79d7d1eb68f19fc5edea3bc5f",
+      "public_sha256": "463200fefe23165bf48a3fd2ffea1e1e96fbb9d79d7d1eb68f19fc5edea3bc5f",
+      "projection": "unchanged"
+    },
+    "results/original_summary.csv": {
+      "source": "SourceData/benchmark_v1/summary.csv",
+      "source_sha256": "c05392a6af6e3d5612f781fa5f7cbbd5771bd97f2168ad53de72680dcdb65c06",
+      "public_sha256": "c05392a6af6e3d5612f781fa5f7cbbd5771bd97f2168ad53de72680dcdb65c06",
+      "projection": "unchanged"
+    },
+    "results/logistic_runs.csv": {
+      "source": "SourceData/revision_20260930/logistic_metrics.csv",
+      "source_sha256": "f690cb31161a6ac22be75c5cee11467c2638bc2fd29976a6b20316c7b1e383d5",
+      "public_sha256": "f690cb31161a6ac22be75c5cee11467c2638bc2fd29976a6b20316c7b1e383d5",
+      "projection": "unchanged"
+    },
+    "results/label_agreement.csv": {
+      "source": "SourceData/revision_20260930/label_agreement_summary.csv",
+      "source_sha256": "00a04a32239504380c7b99335321e535af940b146967d197275375798f67f069",
+      "public_sha256": "00a04a32239504380c7b99335321e535af940b146967d197275375798f67f069",
+      "projection": "unchanged"
+    },
+    "results/station_bootstrap.csv": {
+      "source": "SourceData/revision_20260930/station_bootstrap.csv",
+      "source_sha256": "d05a2367faf248c1d7340c95cb372902d779d2118c7b494d544e4c3c1ddf7d8c",
+      "public_sha256": "d05a2367faf248c1d7340c95cb372902d779d2118c7b494d544e4c3c1ddf7d8c",
+      "projection": "unchanged"
+    },
+    "results/eight_seed_metrics.csv": {
+      "source": "SourceData/resolution_20260930/eight_seed_metrics.csv",
+      "source_sha256": "a210b29ba00eac06c68e09f045bd56727cfbcbce936f23caf0bd6e79bbdd566e",
+      "public_sha256": "a210b29ba00eac06c68e09f045bd56727cfbcbce936f23caf0bd6e79bbdd566e",
+      "projection": "unchanged"
+    },
+    "results/eight_seed_differences.csv": {
+      "source": "SourceData/resolution_20260930/eight_seed_differences.csv",
+      "source_sha256": "9a2c5c65590aeb650190313de51578fb2bfa5b453c6beea79ef0fb04094d249b",
+      "public_sha256": "9a2c5c65590aeb650190313de51578fb2bfa5b453c6beea79ef0fb04094d249b",
+      "projection": "unchanged"
+    },
+    "results/eight_seed_summary.csv": {
+      "source": "SourceData/resolution_20260930/eight_seed_summary.csv",
+      "source_sha256": "649d9f58eb8a14290b4907e55fd6ce50760ec2bf73f68e116ab05a05f83ef1e0",
+      "public_sha256": "649d9f58eb8a14290b4907e55fd6ce50760ec2bf73f68e116ab05a05f83ef1e0",
+      "projection": "unchanged"
+    },
+    "results/cross_protocol_metrics.csv": {
+      "source": "SourceData/resolution_20260930/cross_protocol_metrics.csv",
+      "source_sha256": "ee9f9c3aebdc241e849f17f2e460100cdcedcaa205e8e98ba2592abec2257b00",
+      "public_sha256": "ee9f9c3aebdc241e849f17f2e460100cdcedcaa205e8e98ba2592abec2257b00",
+      "projection": "unchanged"
+    },
+    "results/cross_protocol_counts.csv": {
+      "source": "SourceData/resolution_20260930/cross_protocol_contingencies.csv",
+      "source_sha256": "59e20ebea4c90479ad44d21f1e252f2d3edaa27cbd5256a11056e28ac83e4157",
+      "public_sha256": "59e20ebea4c90479ad44d21f1e252f2d3edaa27cbd5256a11056e28ac83e4157",
+      "projection": "unchanged"
+    },
+    "results/input_perturbation.csv": {
+      "source": "SourceData/resolution_20260930/input_perturbation.csv",
+      "source_sha256": "e1ff3d6eacc50f79a4c2b6473d0493fb9e034930bf386d96ded888ac6519116d",
+      "public_sha256": "e1ff3d6eacc50f79a4c2b6473d0493fb9e034930bf386d96ded888ac6519116d",
+      "projection": "unchanged"
+    },
+    "results/label_perturbation.csv": {
+      "source": "SourceData/resolution_20260930/label_perturbation.csv",
+      "source_sha256": "7143788ffc2a5430e9b1ef57108e3c2b595732b1ee722552dce381bf058a81e9",
+      "public_sha256": "7143788ffc2a5430e9b1ef57108e3c2b595732b1ee722552dce381bf058a81e9",
+      "projection": "unchanged"
+    },
+    "results/physical_summary.csv": {
+      "source": "SourceData/physical_validation_v1/results/summary.csv",
+      "source_sha256": "578a8c1fbadd5ae76b10b993daeb5fc2559251e0a2d2b70e5ca7b5b50ae0aa6f",
+      "public_sha256": "578a8c1fbadd5ae76b10b993daeb5fc2559251e0a2d2b70e5ca7b5b50ae0aa6f",
+      "projection": "unchanged"
+    },
+    "results/subsample_summary.csv": {
+      "source": "SourceData/physical_validation_v1/results/subsample_summary.csv",
+      "source_sha256": "b141d0acc4a72c356b7ef0f0e64c4f1882d948ba985ff198ec75425ae6d21407",
+      "public_sha256": "b141d0acc4a72c356b7ef0f0e64c4f1882d948ba985ff198ec75425ae6d21407",
+      "projection": "unchanged"
+    },
+    "results/frequency_control.csv": {
+      "source": "SourceData/physical_validation_v1/results/frequency_control/classification.csv",
+      "source_sha256": "892511ec38a7fce51691a197b1ae1d84c02edb2f63ab1d1b9824116463fe85b5",
+      "public_sha256": "892511ec38a7fce51691a197b1ae1d84c02edb2f63ab1d1b9824116463fe85b5",
+      "projection": "unchanged"
+    },
+    "results/inference_summary.csv": {
+      "source": "SourceData/inference_20261002/summary.csv",
+      "source_sha256": "7cd2f65be7b74d74fa76611805976cca493e792e88536355a34fc671bb92e80b",
+      "public_sha256": "7cd2f65be7b74d74fa76611805976cca493e792e88536355a34fc671bb92e80b",
+      "projection": "unchanged"
+    },
+    "results/accuracy_cost.csv": {
+      "source": "SourceData/inference_20261002/accuracy_cost.csv",
+      "source_sha256": "485f496c6d960123bdd4e7c13defff9db487c0223c1637f4e08bd8338aebe061",
+      "public_sha256": "485f496c6d960123bdd4e7c13defff9db487c0223c1637f4e08bd8338aebe061",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/analyze_benchmark.py": {
+      "source": "scripts/analyze_benchmark.py",
+      "source_sha256": "368c6b3f28279ad4f1af71d4ad989a47536260d6fc19e40d7c0661a199c3fb57",
+      "public_sha256": "368c6b3f28279ad4f1af71d4ad989a47536260d6fc19e40d7c0661a199c3fb57",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/revision_analysis_20260930.py": {
+      "source": "scripts/revision_analysis_20260930.py",
+      "source_sha256": "682c4d92ea9fb121c201da33bc6598838be9b4b46513442dac4b783cda87fe39",
+      "public_sha256": "682c4d92ea9fb121c201da33bc6598838be9b4b46513442dac4b783cda87fe39",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/analyze_resolution_20260930.py": {
+      "source": "scripts/analyze_resolution_20260930.py",
+      "source_sha256": "8369ac52e89adccc2ef099085029365359aa202764db49b604ce1f0146b44f47",
+      "public_sha256": "8369ac52e89adccc2ef099085029365359aa202764db49b604ce1f0146b44f47",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/render_resolution_results_20260930.py": {
+      "source": "scripts/render_resolution_results_20260930.py",
+      "source_sha256": "4761899c4adbd0f5e5a26afd42b6a0d456e322369b0499778f71c8cda4220500",
+      "public_sha256": "4761899c4adbd0f5e5a26afd42b6a0d456e322369b0499778f71c8cda4220500",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/verify_completed_resolution_20261002.py": {
+      "source": "scripts/verify_completed_resolution_20261002.py",
+      "source_sha256": "a5132b0cc7e41793f1e7c767a4d432dc2a2ed103a795779809b83c99d24da731",
+      "public_sha256": "a5132b0cc7e41793f1e7c767a4d432dc2a2ed103a795779809b83c99d24da731",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/summarize_completed_controls_20261002.py": {
+      "source": "scripts/summarize_completed_controls_20261002.py",
+      "source_sha256": "73d44a9d4821eb5f5113ce3b5f675614b737622b88acaf143cc44b853e4b4f5e",
+      "public_sha256": "73d44a9d4821eb5f5113ce3b5f675614b737622b88acaf143cc44b853e4b4f5e",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/analyze_inference_20261002.py": {
+      "source": "scripts/analyze_inference_20261002.py",
+      "source_sha256": "a6c01f7c5bdff5409cc067f61be9bc15fbf116fcd7b8999f7b6d9d76e50d7048",
+      "public_sha256": "a6c01f7c5bdff5409cc067f61be9bc15fbf116fcd7b8999f7b6d9d76e50d7048",
+      "projection": "unchanged"
+    },
+    "reproduction/paper_scripts/analyze_results.py": {
+      "source": "scripts/analyze_results.py",
+      "source_sha256": "b753638827553cebaa6eb597c446ff407693bc6519e7c781d711e7afc1589a44",
+      "public_sha256": "b753638827553cebaa6eb597c446ff407693bc6519e7c781d711e7afc1589a44",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/analyze_physical.py": {
+      "source": "SourceData/physical_validation_v1/scripts/analyze_physical.py",
+      "source_sha256": "9980d5abbe6d1fafbc2168c2ac98d9b1f1e3118b9e46c6276331132d3cb8e0ac",
+      "public_sha256": "9980d5abbe6d1fafbc2168c2ac98d9b1f1e3118b9e46c6276331132d3cb8e0ac",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/classification_metrics.py": {
+      "source": "SourceData/physical_validation_v1/scripts/classification_metrics.py",
+      "source_sha256": "509e39f30a9a4f182f86ed53fec7e60a37cf7927be63682e709ca5fa98b7233b",
+      "public_sha256": "509e39f30a9a4f182f86ed53fec7e60a37cf7927be63682e709ca5fa98b7233b",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/plot_physical.py": {
+      "source": "SourceData/physical_validation_v1/scripts/plot_physical.py",
+      "source_sha256": "a242ac59112b8cea43f75bb99a8f6dfe7aa3d519444953e721f93d8c4f306bc6",
+      "public_sha256": "a242ac59112b8cea43f75bb99a8f6dfe7aa3d519444953e721f93d8c4f306bc6",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/summarize_physical.py": {
+      "source": "SourceData/physical_validation_v1/scripts/summarize_physical.py",
+      "source_sha256": "d30e7c4c48519a1a5460e6d6e6e464d0463fa3112616851ed1ef2e396c101e27",
+      "public_sha256": "d30e7c4c48519a1a5460e6d6e6e464d0463fa3112616851ed1ef2e396c101e27",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/verify_physical.py": {
+      "source": "SourceData/physical_validation_v1/scripts/verify_physical.py",
+      "source_sha256": "eb58cbca9059a117ce2647f3275e7f02ed94221cc2310d940f3d3538b5b7b6dc",
+      "public_sha256": "eb58cbca9059a117ce2647f3275e7f02ed94221cc2310d940f3d3538b5b7b6dc",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/analyze_frequency_controls.py": {
+      "source": "SourceData/physical_validation_v1/scripts/analyze_frequency_controls.py",
+      "source_sha256": "c2711fe8042bc56f59d5b815637ec3bbbbf1f729ac1c2dad0ad355f470af78a4",
+      "public_sha256": "c2711fe8042bc56f59d5b815637ec3bbbbf1f729ac1c2dad0ad355f470af78a4",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/prepare_frequency_controls.py": {
+      "source": "SourceData/physical_validation_v1/scripts/prepare_frequency_controls.py",
+      "source_sha256": "d385438c9c438f0f26dbf70d7620851e0d7082b7eeaa2c3998442fac2bb68d3b",
+      "public_sha256": "d385438c9c438f0f26dbf70d7620851e0d7082b7eeaa2c3998442fac2bb68d3b",
+      "projection": "unchanged"
+    },
+    "reproduction/physical_scripts/run_frequency_controls.py": {
+      "source": "SourceData/physical_validation_v1/scripts/run_frequency_controls.py",
+      "source_sha256": "c99d108d1c9ddc7402ac2590669ec395c8d3f63fce196ab2ae90add772f2797b",
+      "public_sha256": "c99d108d1c9ddc7402ac2590669ec395c8d3f63fce196ab2ae90add772f2797b",
+      "projection": "unchanged"
+    },
+    "reproduction/original_timing_runner.py": {
+      "source": "SourceData/inference_20261002/benchmark_inference.py",
+      "source_sha256": "6be029cd5e17b130cb68a11718312d05ae47fa09b466c7855b755600830ba140",
+      "public_sha256": "6be029cd5e17b130cb68a11718312d05ae47fa09b466c7855b755600830ba140",
+      "projection": "unchanged"
+    },
+    "timings/chen2026_image_round0.json": {
+      "source": "SourceData/inference_20261002/results/chen2026_image_round0.json",
+      "source_sha256": "2d648cefbc777c8be25ef1a9315cbe6b783e59bd7076e40370dddf2fe31db490",
+      "public_sha256": "ff2c8f9dbce9aa04dd61002efb19aa653894711cb95e15a841caad0ad15eafbe",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/chen2026_image_round1.json": {
+      "source": "SourceData/inference_20261002/results/chen2026_image_round1.json",
+      "source_sha256": "ce20ed40d17a3f74fc740889ad1f235156d966feca67155ed29be9bed5383816",
+      "public_sha256": "f0417eb7cd228fc4c9d7ee73778721cfe9710d39893d767ac7b244f80e00eade",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/chen2026_image_round2.json": {
+      "source": "SourceData/inference_20261002/results/chen2026_image_round2.json",
+      "source_sha256": "5fadb2764dbc36f0f42eafb0b86ac2a177246a9b0267c894945963be433cae28",
+      "public_sha256": "b392073428640bc29a573c968a8dbbf831b5ccb29521b79ca28edab5329a5375",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_ag3_round0.json": {
+      "source": "SourceData/inference_20261002/results/combined_ag3_round0.json",
+      "source_sha256": "a691ed0974e085715fbab7b8c4b7185a39f63ef649d63bc43bfc399ef051c5b7",
+      "public_sha256": "935aea7ee606ff81ab6392663162da4eb0351c085694ec3dd14dd662cdd3542e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_ag3_round1.json": {
+      "source": "SourceData/inference_20261002/results/combined_ag3_round1.json",
+      "source_sha256": "72e3b0a9c7fcbd2f4bbeac3df2e3796f6cca8fb0cc26587b28e92f094f45a60b",
+      "public_sha256": "832b7e8ae1f2a8139ad488f009ae83c485586aee167de3ee68bdc00b04ebb05f",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_ag3_round2.json": {
+      "source": "SourceData/inference_20261002/results/combined_ag3_round2.json",
+      "source_sha256": "92438d553025a73945dcdf1eb3175e6bbb7bfb4f5160e0ae45db4bc9cb392aad",
+      "public_sha256": "7b0cf97620a154f8fc81890a48b5cb1c1c07eda6566d308f305e3ee26f6a08e1",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_multifilter_round0.json": {
+      "source": "SourceData/inference_20261002/results/combined_multifilter_round0.json",
+      "source_sha256": "7e86f34ab6fd5907e94b49666dbcc7b29ac32e61b79ab0a360250b26997ac5e0",
+      "public_sha256": "b0c530c55e208c04dc76d5d3dc1e8eff2d89060ad6c90f59e6e263a64a197e64",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_multifilter_round1.json": {
+      "source": "SourceData/inference_20261002/results/combined_multifilter_round1.json",
+      "source_sha256": "d021cb1326df8f83da10a5f3c47aa2c3d882ec3228980e70de8501ea633dda9b",
+      "public_sha256": "4746334581d24f3ccfeccc6f1683ca41e33698fcb8a88a1b031805b2b5960a07",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/combined_multifilter_round2.json": {
+      "source": "SourceData/inference_20261002/results/combined_multifilter_round2.json",
+      "source_sha256": "322f5ee3a57991a50a11d0449cad815a718716663e296e52888364e5cadc1940",
+      "public_sha256": "97752e7d2edc7a2208cf07d6689643d14ea71c9cc3a6e2796c45f8c079a4611e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/deeprfqc_round0.json": {
+      "source": "SourceData/inference_20261002/results/deeprfqc_round0.json",
+      "source_sha256": "f57cbdec0f3bd2a411b4fd966416e2665d9286b8f957d47310101c439f602848",
+      "public_sha256": "1974fff11a443191b43851bd1e2af39b5cd7414f3dbb587ad14f09f684ff956c",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/deeprfqc_round1.json": {
+      "source": "SourceData/inference_20261002/results/deeprfqc_round1.json",
+      "source_sha256": "516876e7d47c4ac8c023c8e3c5656a2255c65218e7c5de4619de7f0d9cf9f478",
+      "public_sha256": "da9f0ee9d7deedae5d757a9e26418eebbbc18941deca04436f5b66b06f342b17",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/deeprfqc_round2.json": {
+      "source": "SourceData/inference_20261002/results/deeprfqc_round2.json",
+      "source_sha256": "4ecc1ad77ba0ae6696546f90955466fec74264b55aec197f78921a6b61a8f184",
+      "public_sha256": "120566dbe18598dd194c127cd13c193c687c64cd29aab57b57f800101a907413",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_ag3_round0.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_ag3_round0.json",
+      "source_sha256": "7eb9c38618e12108e8b1f1f7c64195b8f78e9a5bca3e46200f71c518f230ea38",
+      "public_sha256": "2d925f1c67a229fb7ca1b54c702d579acdb503a625a214143f4a8a2a87ba09bb",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_ag3_round1.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_ag3_round1.json",
+      "source_sha256": "7b2be4ec5e9414792b1bc536ff4ac7a6261fd935815fb52e2632fe6ccaae9fc7",
+      "public_sha256": "7470049b4774d67ae21912f502a185ea4f46ca663a3e941f622b7c2a3652e400",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_ag3_round2.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_ag3_round2.json",
+      "source_sha256": "ba89bc0d65cf1f8976ef8fc3c51628defbc66097e7108497ed1ccbbdf83cf226",
+      "public_sha256": "31b828e42312360445306ea573419bfcfdb0d0c392c6f461795ebdd230d14fdf",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_multifilter_round0.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_multifilter_round0.json",
+      "source_sha256": "4a477aed3b1a58b50d5e359db353dfc5845b9fe15daed9b4866894e818ce7aca",
+      "public_sha256": "6e20eb718f40fe1c1386dcec41cfab331f7a6eec80cbf19622243f2c71a5ec7d",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_multifilter_round1.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_multifilter_round1.json",
+      "source_sha256": "fdcde0dbeeab3d352f6e426e8f1c2520406a6865b91297f76a63b43df44c8bd6",
+      "public_sha256": "f9f91588706c78eee4cc28b5ff488df99f77aeb69cd60da44972989cc2018b41",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/descriptors_multifilter_round2.json": {
+      "source": "SourceData/inference_20261002/results/descriptors_multifilter_round2.json",
+      "source_sha256": "06811f962843745ebc6146a4ddaae92f9566312b097d9fb1749a44118bd43aa5",
+      "public_sha256": "b9c1f66f4c25843d048eb36bc37a6877de5139c76224a6c39f915747128a1af7",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan2021_cnn_round0.json": {
+      "source": "SourceData/inference_20261002/results/gan2021_cnn_round0.json",
+      "source_sha256": "ab3d509f8d39989f7eeb06833bb57dea12bb6868b6d3f8706c1d5d6d77e08c50",
+      "public_sha256": "6d2cf02751f84fbb784b5d88559e3169a64c2ec87118882ec44dadad8f881b74",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan2021_cnn_round1.json": {
+      "source": "SourceData/inference_20261002/results/gan2021_cnn_round1.json",
+      "source_sha256": "e68f00c6cd47e761eb1b5e586036f950a024e6421c07fb0181b7a89adf1fe0dc",
+      "public_sha256": "c61c51cb4750ff297e13bf6034a11994df9126f9a74504a43369c254107f2561",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan2021_cnn_round2.json": {
+      "source": "SourceData/inference_20261002/results/gan2021_cnn_round2.json",
+      "source_sha256": "6b7735f51112a4db035a51d2062ad66607e3874c25cba542817d684316f87bb8",
+      "public_sha256": "2b0b45edd732f7da062db1cab8a18a6462d2468152351c3d6702c30bbf194655",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan_cnn_round0.json": {
+      "source": "SourceData/inference_20261002/results/gan_cnn_round0.json",
+      "source_sha256": "2f46ad0456412729778f6453c18803a89f75b947ae32f9bb312356659632b305",
+      "public_sha256": "ff5fedcf87546a3fc572180c1b7abc9a511bcd68c529f3347e527057c810f68e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan_cnn_round1.json": {
+      "source": "SourceData/inference_20261002/results/gan_cnn_round1.json",
+      "source_sha256": "1a54477da98dbca06facc67cba22b2d7893becd2ad7a17b181c420bce92e6303",
+      "public_sha256": "18292d894d43a0caeaceb528b31bc1705db8dbb34bfb99d4b1e26d73550c88f0",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gan_cnn_round2.json": {
+      "source": "SourceData/inference_20261002/results/gan_cnn_round2.json",
+      "source_sha256": "5968e416f50037cdbda9b86be55db8d2947f7b1358897e4e0e1273112e45f914",
+      "public_sha256": "c00dd37187cc46a9598140b03ab9947b699a2263910a56062fc64287e0c265c9",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_bilstm_round0.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_bilstm_round0.json",
+      "source_sha256": "2ac28fb164e2e9a9b77a30fb6d78953f342800bdb974f41a390db285b052596b",
+      "public_sha256": "d5d48a4179b035daed6a35609b16e443460b7ae30d04b81e8d6f68c25fafafce",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_bilstm_round1.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_bilstm_round1.json",
+      "source_sha256": "e5c8e6c5c7081fde7e268b65c70b52e600d1236cad798e76f4817c149c47591e",
+      "public_sha256": "ff2a2c73e4f1bdb96f57fc85f41fab7bcceda51c815eaeb68fbf3b070855d4ca",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_bilstm_round2.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_bilstm_round2.json",
+      "source_sha256": "70da0d41ce0627b9918e26ceaf9c0187b720c498bb19ad6727ca03220cc43681",
+      "public_sha256": "b2ff5c7dea7e6bba3e4060bfe66db446b98add2362ec556d8b6cd22850bfbdbe",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_round0.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_round0.json",
+      "source_sha256": "aad575d6d48435ec9215e5258e9a7e1d8bde120cd9bcfb83a206584d1f45e357",
+      "public_sha256": "b87041d92edfdadac98786e85b8ce0a4b1adbfbf6bfbc8ecfb20f79470a410e4",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_round1.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_round1.json",
+      "source_sha256": "8d8b0f798350dfefe0fea5ae85b5248e2f1f90b401c17b2a9e43fac8b6749708",
+      "public_sha256": "12e43442055e52cb810daf1fc2146c3592147cb122ef67ea50400b2de4f57ce8",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/gong_cnn_round2.json": {
+      "source": "SourceData/inference_20261002/results/gong_cnn_round2.json",
+      "source_sha256": "0ddb82ddb0b4db8bd2abf48a5cb7c6f6059f707642978aee29c253a20afe67ff",
+      "public_sha256": "571ff25636173ed46533e04cc5a3395c887d40fde9bdb08cb08eb61b8faf43c8",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/hegaz_capsule_round0.json": {
+      "source": "SourceData/inference_20261002/results/hegaz_capsule_round0.json",
+      "source_sha256": "ec1f647858a1f9fb6a583b345d08a21a2e39ce679d82ea9e43447a46ed489758",
+      "public_sha256": "b9da359efe21bb367502255c38a1ed05491fc1370029909edcfd191dc00ff5f6",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/hegaz_capsule_round1.json": {
+      "source": "SourceData/inference_20261002/results/hegaz_capsule_round1.json",
+      "source_sha256": "25ad473fa04f93568b3ee6f9141760eac531b3394aff18defb804c65a9e44aab",
+      "public_sha256": "690991827c3510e376f5ebcd845a182ce4839f23f8f163faaa94e5a9fb22adc8",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/hegaz_capsule_round2.json": {
+      "source": "SourceData/inference_20261002/results/hegaz_capsule_round2.json",
+      "source_sha256": "31bea1541e9a48e01ece9d1e008a4904cce2353e4cc530e5d4b14a3d208ee0dc",
+      "public_sha256": "b4a3ecd4e47fe747e5bd321e9f29098c4aad0ee73567fc7183028af78d523fa0",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/li2021_cnn_round0.json": {
+      "source": "SourceData/inference_20261002/results/li2021_cnn_round0.json",
+      "source_sha256": "0014fa118780ea6a7ed813bb1029110afd9dc2dd65b3d0f6117d63b945a7754d",
+      "public_sha256": "3ec396129ac1cb4233f765c026983f6455259367e3778ffd62cdd93d958a3824",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/li2021_cnn_round1.json": {
+      "source": "SourceData/inference_20261002/results/li2021_cnn_round1.json",
+      "source_sha256": "b844cb108f616250577826042976666e503ff6aea6371fc4c2be9eb6579bf174",
+      "public_sha256": "96874deaa32ed4f9f756a39ccf12c25dbe6a6806fe1e7f6c827830c58a0b14f7",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/li2021_cnn_round2.json": {
+      "source": "SourceData/inference_20261002/results/li2021_cnn_round2.json",
+      "source_sha256": "422fab1259eaf80f1dad20d075a07a19c41363a69ffc44a3939170cbfbb165b4",
+      "public_sha256": "3ec6a697421648ba4fbe31edb0cc81d18618f98c8c3c3b945fcdf7c68d83c3c6",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_ag3_round0.json": {
+      "source": "SourceData/inference_20261002/results/logreg_ag3_round0.json",
+      "source_sha256": "c886704ece75cb236166648c929c7f0718ed579af1f48993f518c1dd2f8b4356",
+      "public_sha256": "4a04751f40c38121939235e0f4c7e7868bbc3c3ce75f618b91465c1b23e83c2c",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_ag3_round1.json": {
+      "source": "SourceData/inference_20261002/results/logreg_ag3_round1.json",
+      "source_sha256": "43991fd84d5b70935b1324cb3596df03b104546471b9df586a55c3909d4774a7",
+      "public_sha256": "b65e4fd2cfcc4c1db2b0631d2ca08ec904b4f76cee7354cf95e93049ef79801e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_ag3_round2.json": {
+      "source": "SourceData/inference_20261002/results/logreg_ag3_round2.json",
+      "source_sha256": "af6cece6b4865743a6622cf6c6dfadfbce34bec32cab2dc63fe872f03cad3689",
+      "public_sha256": "66107b81496f7238abe3d6732e6cffcabc1a5019ef970ce5685cb6678374f00d",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_multifilter_round0.json": {
+      "source": "SourceData/inference_20261002/results/logreg_multifilter_round0.json",
+      "source_sha256": "9d91a2902bffc2da75ea035c487539d11c0b3174e86421ed8d327901a7b4e624",
+      "public_sha256": "884b35b4d41922c4869a47f762fb26bf2d8baf7c76e8860e31ba98fa04acf93e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_multifilter_round1.json": {
+      "source": "SourceData/inference_20261002/results/logreg_multifilter_round1.json",
+      "source_sha256": "2a3fcf38d13f14e56299f8317461a2ab705fec6dd9ce72b6094f2ba4d198b26c",
+      "public_sha256": "31a8a57fb28b3b0fc2c827a77dcc40fb065aeb0b4a8931d15662334a670385d6",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/logreg_multifilter_round2.json": {
+      "source": "SourceData/inference_20261002/results/logreg_multifilter_round2.json",
+      "source_sha256": "42dbd18f10a36ee1eaa7d67f3814873b0a547937d7e40b28d9d22da44131980a",
+      "public_sha256": "eeb6e7c6aa79e22ae671277415984020ad6599326221e5b3a7387c435e67549a",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag1_round0.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag1_round0.json",
+      "source_sha256": "a31d964a3f89a2e8968656675cd0fcf832b3b8abcc14c7e22b91f8e2f5b87381",
+      "public_sha256": "dcdc7ff7e1c4e25f2b1ef9a0bd884d4beb6b97963b1b58ef51eb3bc2ab132ef2",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag1_round1.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag1_round1.json",
+      "source_sha256": "b70789d1c507653136bbe8946e67374ca895f87c9cc22189f5a8b462f6220780",
+      "public_sha256": "919c57576fd045bd3b009333191085fc6b5c36a9f46ffce4285b06a44f5d8e32",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag1_round2.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag1_round2.json",
+      "source_sha256": "c6766a6b36af15ac506faa4081bf59505f3e7b0dd73d0963db27619f5976202f",
+      "public_sha256": "9eb4ed2c56813301206d29ee3a43bfee27382622102c3521115801e7f8f812f3",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag3_round0.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag3_round0.json",
+      "source_sha256": "855254f746585a0c781147cda616adef181b91d57910929ddfb20914135a618a",
+      "public_sha256": "7066cb7f4333bab54b7266f9471b267cda2fc87bd8bebcd9fe9bd30cea322f2e",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag3_round1.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag3_round1.json",
+      "source_sha256": "d19291968253d7fd6d411b821a7d2c51516a5538f19b5d9eaa1f42fc3be5f33b",
+      "public_sha256": "dc5b32e866a83e7e5ad491364b03da1be83fdd4e812c3218c534db5221191c56",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag3_round2.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag3_round2.json",
+      "source_sha256": "ff5e6704bf7e09b7f172e4e88cc09f64e67d8d83255d98fc035f296b50dacd21",
+      "public_sha256": "172ab20b7f00147ed3bf978ffed6e51676d82a0d2de0e8bed80f2502536d3702",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag5_round0.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag5_round0.json",
+      "source_sha256": "351c04b2916ac5376148bd2b8abe21b46474651f0a5251203ee5fe8f3308d3ee",
+      "public_sha256": "9cf34f0b3f752656c038886342046249270e1744b0472c606b30dd79c17f754d",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag5_round1.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag5_round1.json",
+      "source_sha256": "eebc1893d3bbba05478904f9759da46b456f4f3b8a0a90ca2c35d7b4c8ec6bd8",
+      "public_sha256": "637c3510f9b37165d8c2bf8d8f58e98863f59101d10ca170acd896656975103b",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_ag5_round2.json": {
+      "source": "SourceData/inference_20261002/results/reference_ag5_round2.json",
+      "source_sha256": "89321ce02d0275fb0f3053d561aea5b62fbf7f4e2b9fbec2e69099fa5a6320c4",
+      "public_sha256": "a6ac7690442290171189a85bde34130f0109607f9a937875c2fd84be691ddc13",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_multifilter_round0.json": {
+      "source": "SourceData/inference_20261002/results/reference_multifilter_round0.json",
+      "source_sha256": "651c74d58d5199d7a427d57887827a46629b2ad4c667bbc867000cd757692102",
+      "public_sha256": "7d2979df9ea658efcfa48e5516bb9ed8bfa42ee757bbd7329681732da83229d8",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_multifilter_round1.json": {
+      "source": "SourceData/inference_20261002/results/reference_multifilter_round1.json",
+      "source_sha256": "2962e7c7378574a922c4c3740bf9f9ed4dd0ebd71b60f10b2b176d0385e5ad05",
+      "public_sha256": "2a6dea1c3bb17c2143fddd0f1a9eea6f8c2c113fad862023ff305d8355fe466d",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/reference_multifilter_round2.json": {
+      "source": "SourceData/inference_20261002/results/reference_multifilter_round2.json",
+      "source_sha256": "d5021e16846083df5a555ca6ee3573cba9bf40bb043460d7963c29ad12a43226",
+      "public_sha256": "561741fb39bdd5caee4103f2593bd06219c88144eae7348be8661f3f29e43690",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/xiong2025_fcm_round0.json": {
+      "source": "SourceData/inference_20261002/results/xiong2025_fcm_round0.json",
+      "source_sha256": "771c238c2faf8fb66fbc08c38816cf409a9d2dff46cdef3e334f544b12b2ef0f",
+      "public_sha256": "4b3c322935dbd42ade1d3d46aaa613659f93e2b6e3049cf54494da457efd9a0d",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/xiong2025_fcm_round1.json": {
+      "source": "SourceData/inference_20261002/results/xiong2025_fcm_round1.json",
+      "source_sha256": "6998e8c03e8d55555ab2e16bb7ea45917832dfda43c577cd49eba245111ec5a8",
+      "public_sha256": "5ea7325fd913818ebd18633bf27d2ddef723d476939f0e94b6cbf5bf7f1f181f",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "timings/xiong2025_fcm_round2.json": {
+      "source": "SourceData/inference_20261002/results/xiong2025_fcm_round2.json",
+      "source_sha256": "92028e5a85e5fec2d1a5a85b064a9f6e4a0e0ad03f04126755f8f1b18f120c5a",
+      "public_sha256": "14010e07e4b55f9f0906f550e756e501e196f5f362bb7c99704b233a23fc11cd",
+      "projection": "timing fields only; host paths, GPU UUIDs and raw IDs omitted"
+    },
+    "protocol.json": {
+      "source": "SourceData/inference_20261002/protocol.json",
+      "source_sha256": "5f93223940ea30976e795fa98c0eaa05c5fa4dbad4f7488800d02fbfc54f86c5",
+      "public_sha256": "53301f954c62bf765d1d1cef53434ea94eb66459341d3923756831c93af1831f",
+      "projection": "deployment paths and GPU UUID omitted"
+    }
+  }
+}

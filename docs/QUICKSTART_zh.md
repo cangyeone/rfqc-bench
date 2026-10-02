@@ -60,3 +60,9 @@ rfqc-bench train --model reference_multifilter --train train.npz --validation va
 默认选最早登记的种子，不按测试精度挑模型。17 个主配置各提供三个种子；
 AG1/AG5 仅提供已完成的 20260929。`from_pretrained` 指已完成 RF 训练的权重，
 不表示论文采用了相位拾取迁移学习。权重首次下载后可以离线加载。
+
+## 完整对比与推理测速
+
+[v0.1.1对比结果与复现指南](BENCHMARK_zh.md)说明无数据重建表格、用自己的标签
+对比17个主配置、测量19个配置的推理速度，以及Python测速API。当前论文对比结果
+已同步至 `benchmarks/2026-10-02/`；原始波形、标签和逐样本预测不随仓库发布。

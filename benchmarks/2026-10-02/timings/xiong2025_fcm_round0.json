@@ -1,0 +1,27 @@
+{
+  "method": "xiong2025_fcm",
+  "round": 0,
+  "seed": 20260929,
+  "kind": "fcm",
+  "device": "cpu",
+  "parameters": 8,
+  "records": 24533,
+  "views": [
+    1
+  ],
+  "sample_ids_sha256": "28e0cb199aab3a19c7fd318a4ce0597d8c54ed201f296682386522ae01170ad0",
+  "bundle_sha256": "c23063344dcc895bc0ab5aeaca596c203191c1f7f0ba2a76d163bc36aa7919fb",
+  "source_model_sha256": null,
+  "protocol_sha256": "5f93223940ea30976e795fa98c0eaa05c5fa4dbad4f7488800d02fbfc54f86c5",
+  "script_sha256": "6be029cd5e17b130cb68a11718312d05ae47fa09b466c7855b755600830ba140",
+  "torch": "2.8.0+cu128",
+  "numpy": "2.5.3",
+  "cpu_model": "AMD Ryzen Threadripper PRO 3955WX 16-Cores",
+  "pool_seconds": 0.794733498,
+  "pool_records_per_second": 30869.467641340063,
+  "mean_ms_per_record": 0.03239446859332328,
+  "warmup_calls": 1,
+  "predicted_good": 5145,
+  "latency_scope": "Complete station-context pool; no independent-record latency",
+  "max_rss_kib": 1069936
+}

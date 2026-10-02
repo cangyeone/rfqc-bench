@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "recorded_at": "2026-10-02T09:16:26.242241+00:00",
+  "scope": "Post-result deployment-cost measurement; no training or model selection",
+  "package": "rfqc-bench 0.1.0 released wheel",
+  "wheel_sha256": "357d504b163359689c9b40d7e31660c3fe2ba847fa373f26da24aee2ad0b917b",
+  "package_git_commit": "9e56552141261a03c128227f360d9a34528df734",
+  "gpu_count": 1,
+  "device_neural": "cuda:0",
+  "device_statistical": "cpu",
+  "cpu_threads": 4,
+  "interop_threads": 1,
+  "precision": "float32, AMP and TF32 disabled; default eager implementation",
+  "test_sample_size": 512,
+  "sample_selection": "Lowest SHA256(sample_id) among original test records having all seven views, shared by independent-record models; no label/score selection.",
+  "seed": 20260929,
+  "batch_sizes": [
+    1,
+    32
+  ],
+  "warmup_calls": 10,
+  "repeated_rounds": 3,
+  "latency_calls": 100,
+  "throughput_calls": 32,
+  "timing_scope": "Resident input RFData to probabilities and binary decisions, including native-view selection, validation, transformation, host-to-device and device-to-host transfers. Disk I/O, loading weights, initial RFData construction, supplied-descriptor extraction and HTTP/network overhead excluded.",
+  "model_scope": "Synchronized wall time for network forward plus sigmoid on already prepared inputs; Chen image rasterization is inside its network and remains included.",
+  "station_context": "FCM uses the complete original 24,533-test-record/26-station pool, one warm-up and three whole-pool measurements; no independent-record latency is assigned.",
+  "methods": [
+    {
+      "name": "gong_cnn",
+      "seed": 20260929,
+      "bundle_sha256": "d169b34e247a0e260c5f62ae3ab7a9d009c1ba53ec3a68d7e175f0adef96c571",
+      "source_model_sha256": "acf3db311bf734add6441d235d5abe3fdcc0d1939e084fd965d6417350bce0eb"
+    },
+    {
+      "name": "gong_cnn_bilstm",
+      "seed": 20260929,
+      "bundle_sha256": "a2139b5248ba9c1c65e8289c8c876cfa3d5e0b65249e5771fe03b59d7c72af30",
+      "source_model_sha256": "edb5ed1bf8d00582f0e858f3ca74f1622ff928712a6169cab3f83f1b1967a2fd"
+    },
+    {
+      "name": "gan_cnn",
+      "seed": 20260929,
+      "bundle_sha256": "c0812906ef7e77a220bbbde962ac9dd8cde0bfb91bca8edfd970217005c8dc72",
+      "source_model_sha256": "6c351654cac416e9701d61f9fb1b47cf3e61e692deb0f15644eee0b6980f15db"
+    },
+    {
+      "name": "deeprfqc",
+      "seed": 20260929,
+      "bundle_sha256": "515c724bb0e08cdc33acae7a42dee4745c35869a2e400c2d2c89839ddc821eae",
+      "source_model_sha256": "6ca0629b9a5564a598d4b542e7702d08c5f950310b3249a77a9124aeb48ca22c"
+    },
+    {
+      "name": "hegaz_capsule",
+      "seed": 20260929,
+      "bundle_sha256": "a845c390cb53f31093812495ed5f34d223727fb899db850343fe7785b1cc62f1",
+      "source_model_sha256": "7a94e623136e2a9115b9504765de731e0741b48e87fca4f59230af17ae65717d"
+    },
+    {
+      "name": "li2021_cnn",
+      "seed": 20260929,
+      "bundle_sha256": "ff75c77c3b2c6dbc33cfd36b0d1a00b78e6ee6425b0b3d79ef97f46e1fe3c700",
+      "source_model_sha256": "d4b1cecd1ed1bdf60070a229229b07bceb820d17d0a6134ea10645279a503035"
+    },
+    {
+      "name": "gan2021_cnn",
+      "seed": 20260929,
+      "bundle_sha256": "7ab1a869d104b2e52f04ac332191d846ad7f7a8b3efb0d665a240b37e74b00cf",
+      "source_model_sha256": "6d2ca4da39706c559ea8ffe3e440884c3986a8c5e290650ff2b47567421a3bd7"
+    },
+    {
+      "name": "chen2026_image",
+      "seed": 20260929,
+      "bundle_sha256": "7fcf0ce999a53c002502b0bd1ceff393177add2e0610180ad71b76f134bbe68c",
+      "source_model_sha256": "7a6069356650219914d58d925ae08fa5348646de9650eeca6b92101a950095a6"
+    },
+    {
+      "name": "reference_ag3",
+      "seed": 20260929,
+      "bundle_sha256": "03c52cfb9394b469c8c77de89d8c0742c52d268d43f77772cc79c371efc3eef8",
+      "source_model_sha256": "ddd8e5ab8fc789afb3a18c3624eb0cdcc2d6b7d0d288bf480cc10222f777004c"
+    },
+    {
+      "name": "reference_multifilter",
+      "seed": 20260929,
+      "bundle_sha256": "9b1a117c4e79b664efbfc6eef75324fa13171f2f67ef79927bab1c609edd5f5e",
+      "source_model_sha256": "34e8232f0e913d0c3b74a44efd360cd2ac76262ef8d63bb31a4c621e7ec7f9e6"
+    },
+    {
+      "name": "descriptors_ag3",
+      "seed": 20260929,
+      "bundle_sha256": "7c76ab0942658ba0bece2e87cc2ce1e68dcf3a4fae524ef77058a3882f1e121b",
+      "source_model_sha256": "53f4a300173a97982a1d9eb8c23b1e99481ac0a5e43266dffe0c3acee3c2ab8b"
+    },
+    {
+      "name": "descriptors_multifilter",
+      "seed": 20260929,
+      "bundle_sha256": "751c8c82916e6121c9fe4876f8303750aec96441ec7be3727b11a2b986bb8f0f",
+      "source_model_sha256": "7cf30d4289d9a26bcac6a9edb31797ee76e1bf7c92b532d966151f9582e1677c"
+    },
+    {
+      "name": "combined_ag3",
+      "seed": 20260929,
+      "bundle_sha256": "34f64e355f243883c759e2cfd710892ae8744748227aa824f943d959c76b909b",
+      "source_model_sha256": "53ca95d57bbfd4280b83dc99aff563d752f729d6340dfafe36ef0699136eeb3d"
+    },
+    {
+      "name": "combined_multifilter",
+      "seed": 20260929,
+      "bundle_sha256": "eadbcaac2f016d8eecab240ebfefc859de88d2ca814640fbdaa0d6851907d7f8",
+      "source_model_sha256": "b2bf3061dc08443b68e186526c2c7254d2a6c9a45983135aff52a05ccac61f58"
+    },
+    {
+      "name": "xiong2025_fcm",
+      "seed": 20260929,
+      "bundle_sha256": "c23063344dcc895bc0ab5aeaca596c203191c1f7f0ba2a76d163bc36aa7919fb",
+      "source_model_sha256": "1a220cd05b2355a5ac78b39c754d493daacacb70c5860edfa33e6b4e56061ad5"
+    },
+    {
+      "name": "logreg_ag3",
+      "seed": 20260929,
+      "bundle_sha256": "03406a6e5a58dd24129f351eeddc60ff71dd22e577944be2806193b5f192269e",
+      "source_model_sha256": "fda517470e0e31b2a1cb775790bda011d4fec22ad2b67d1739fb502c85866fc5"
+    },
+    {
+      "name": "logreg_multifilter",
+      "seed": 20260929,
+      "bundle_sha256": "99a067826b9d9cc5c489244f6448ddbd7010923e3645fd4844a50d618e524666",
+      "source_model_sha256": "92a1857e6fb749878f4bdea0ea44ab75830248d715b39119a5e2106ed4a5f02f"
+    },
+    {
+      "name": "reference_ag1",
+      "seed": 20260929,
+      "bundle_sha256": "0f88bb76b9dc06be00aac4885c95ebfa49ab5ee1206c30de93bba6cf27e4fe6e",
+      "source_model_sha256": "63dc2681b85b93560d34462dfeea6db424addde4529f3468c486634a65f1fcad"
+    },
+    {
+      "name": "reference_ag5",
+      "seed": 20260929,
+      "bundle_sha256": "d39c1614214909148d064291f3e7766ed48dc7ab2292900b01e5d8832c40be64",
+      "source_model_sha256": "f5118fdd9e587ff49afa344d84420de11739c5e0ecb1c65326045b9cc00186f6"
+    }
+  ],
+  "source_protocol_sha256": "5f93223940ea30976e795fa98c0eaa05c5fa4dbad4f7488800d02fbfc54f86c5",
+  "source_script_sha256": "6be029cd5e17b130cb68a11718312d05ae47fa09b466c7855b755600830ba140",
+  "publication_note": "Public projection; sample IDs, filesystem paths and GPU UUIDs omitted. Not the original byte-identical protocol."
+}

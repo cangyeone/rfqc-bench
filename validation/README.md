@@ -1,4 +1,26 @@
-# Release validation: v0.1.0
+# Release validation
+
+## v0.1.1: comparison snapshot and inference timing
+
+`comparison_release_20261002.json` records the 34 passing synthetic tests, public
+snapshot verification and installed-wheel checks. The wheel was imported outside
+the checkout using dependencies from the existing Python environment; this is
+not a clean dependency-resolution test. CLI timing, six fresh-process rounds
+across neural/LogReg/FCM implementations, hash-verified resume and a three-model
+accuracy command passed on runtime-generated synthetic data. Those scores are
+installation checks and are not published scientific results.
+
+The public reproduction command verifies 92 source-file hashes, aggregate
+comparisons and all 57 original timing records. The 53 model bundles, network
+implementations, preprocessing and prediction behavior remain unchanged. The
+portable v0.1.1 timing runner was smoke-tested on CPU; the manuscript's recorded
+RTX 5090 timings were obtained with the original v0.1.0 implementation.
+
+No observational arrays, individual label vectors, sample/station lists or
+per-record predictions are added. See the snapshot manifest for the explicit
+projection of timing metadata and the limits of aggregate-only reproduction.
+
+## v0.1.0: model export and prediction APIs
 
 This folder contains aggregate software checks, not RF waveforms, labels,
 station/sample metadata, or per-record predictions. Checks were performed on
