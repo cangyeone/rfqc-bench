@@ -1,5 +1,27 @@
 # Release validation
 
+## v0.1.2: EQR directory screening
+
+`eqr_interface_20261009.json` records the aggregate checks. The full local suite
+passes 54 tests, including generated little/big-endian SAC v6/v7 files, malformed
+inputs, missing views, duplicate events, filename mapping, record preservation,
+complete-station FCM context, the directory HTTP boundary and CLI/model loading.
+When installed, ObsPy independently verifies the waveform slices. Tests require
+no observational data; the optional ObsPy oracle is skipped if unavailable.
+
+Additional private-fixture checks read 224 SAC files (32 seven-view events).
+The published Reference multi-filter model is compared with its array API using
+independently read ObsPy waveforms. Output paths, threshold decisions, source-file
+preservation and hashes are checked. These are software integration checks, not
+new accuracy experiments or validation of the underlying data/label cohort.
+No new DB/YP training weights are published; that training has been paused at the
+user's request pending data review. Existing v0.1.0 bundles remain unchanged.
+
+For an optional comparison with a user-owned archived prediction CSV, run
+`scripts/check_eqr_parity.py --help`. It requires local fixtures and a completed
+bundle; neither is distributed. CPU/CUDA roundoff is allowed within the chosen
+tolerance, while decisions and retained filenames must agree exactly.
+
 ## v0.1.1: comparison snapshot and inference timing
 
 `comparison_release_20261002.json` records the 34 passing synthetic tests, public

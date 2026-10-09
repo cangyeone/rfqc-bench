@@ -18,5 +18,7 @@ release_assets/
 *.npz
 *.sac
 *.SAC
+*.eqr
+*.EQR
 *.zip
 .env

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rfqc-bench"
-version = "0.1.1"
+version = "0.1.2"
 description = "Receiver-function quality control: common model APIs and reproducible benchmark adapters"
 readme = "README.md"
 requires-python = ">=3.10"

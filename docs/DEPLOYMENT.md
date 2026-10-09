@@ -3,11 +3,11 @@
 Install the `api` extra and start one model per process:
 
 ```bash
-python -m pip install "rfqc-bench[api] @ git+https://github.com/cangyeone/rfqc-bench.git@v0.1.0"
+python -m pip install "rfqc-bench[api] @ git+https://github.com/cangyeone/rfqc-bench.git@v0.1.2"
 rfqc-bench serve --model gong_cnn --seed 20260928 --device cpu --host 127.0.0.1 --port 8000
 ```
 
-Routes: `GET /health`, `GET /model`, `GET /models`, `POST /predict`.
+Routes: `GET /health`, `GET /model`, `GET /models`, `POST /predict`, `POST /screen-eqr`.
 Interactive docs: `/docs`; machine-readable schema: `/openapi.json`.
 This uses [FastAPI's documented OpenAPI interface](https://fastapi.tiangolo.com/tutorial/first-steps/).
 
@@ -53,3 +53,26 @@ proxy and body-size limits. The package does not provision a public server or
 store request datasets. Select one GPU per service with `--device cuda:0` or
 `cuda:1`; use separate ports. Model execution is serialized inside a process;
 multiple workers independently allocate weights and can multiply GPU memory.
+
+## Optional server-side EQR directories
+
+```bash
+rfqc-bench serve --eqr-root /srv/rfqc --host 127.0.0.1 --port 8000
+curl -X POST http://127.0.0.1:8000/screen-eqr \
+  -H 'Content-Type: application/json' \
+  -d '{"directory":"incoming/all_eqr","output":"results/record"}'
+```
+
+`directory` and optional `output` are relative to the configured **server-side**
+root, not the client's filesystem. Flat inputs can specify `"gaussian":3`.
+Files must already exist on the server; there is no upload endpoint. The response
+is a JSON summary including paths to the plain record, prediction/rejection CSVs,
+counts, model identity and hashes. The endpoint returns 403 unless `--eqr-root`
+was configured. Path traversal and symlinks are refused. Existing output returns
+409; the HTTP endpoint never overwrites results. `--max-eqr-files` defaults to
+100000 and caps the scan before inference/output. Large jobs should use the CLI;
+HTTP execution is synchronous. This service assumes a trusted server filesystem
+and does not replace authentication or filesystem permissions.
+
+The Python factory is `create_app(predictor, eqr_root='/srv/rfqc',
+max_eqr_files=100000)`; existing array clients are unchanged.

@@ -63,6 +63,11 @@ class RFQCPredictor:
         """Load RF-trained benchmark weights; no phase-task transfer is implied."""
         return cls.from_directory(download_model(name,seed,cache_dir),device)
 
+    def screen_eqr(self,directory,output=None,**kwargs):
+        """Screen a SAC EQR directory using this already-loaded model."""
+        from .eqr import screen_eqr
+        return screen_eqr(directory,output,predictor=self,**kwargs)
+
     def predict(self,data=None,*,waveforms=None,features=None,gaussians=None,lengths=None,stations=None,batch_size=32):
         if batch_size<1: raise ValueError('batch_size must be positive')
         if data is not None and any(x is not None for x in [waveforms,features,gaussians,lengths,stations]):

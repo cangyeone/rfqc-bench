@@ -17,7 +17,7 @@ def main(argv=None):
     sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('list',help='List every model configuration')
     sub.add_parser('doctor',help='Show installed runtime and available compute devices')
-    for cmd in ['download','predict','demo','serve','benchmark']:
+    for cmd in ['download','predict','demo','serve','benchmark','screen-eqr']:
         c=sub.add_parser(cmd)
         group=c.add_mutually_exclusive_group()
         group.add_argument('--model',default='reference_multifilter')
@@ -31,6 +31,13 @@ def main(argv=None):
         elif cmd=='serve':
             c.add_argument('--host',default='127.0.0.1');c.add_argument('--port',type=int,default=8000)
             c.add_argument('--max-records',type=int,default=4096)
+            c.add_argument('--eqr-root',type=Path,help='Allow directory screening only beneath this server-side directory')
+            c.add_argument('--max-eqr-files',type=int,default=100000)
+        elif cmd=='screen-eqr':
+            c.add_argument('directory',type=Path,help='Recursively scan SAC .eqr files')
+            c.add_argument('--output',type=Path,help='Plain record file; defaults to DIRECTORY/record')
+            c.add_argument('--gaussian',type=float,help='Known Gaussian coefficient for flat inputs without AG folders (not Hz)')
+            c.add_argument('--overwrite',action='store_true',help='Replace existing record and its sidecars')
         elif cmd=='benchmark':
             c.add_argument('--input',type=Path,required=True);c.add_argument('--output',type=Path,required=True)
             c.add_argument('--sample-size',type=int,default=512)
@@ -77,7 +84,14 @@ def main(argv=None):
                 import uvicorn
                 from .api import create_app
             except ImportError:raise ValueError('Install the [api] extra to run the HTTP service') from None
-            uvicorn.run(create_app(predictor,a.max_records,a.batch_size),host=a.host,port=a.port);return
+            uvicorn.run(create_app(predictor,a.max_records,a.batch_size,eqr_root=a.eqr_root,
+                                   max_eqr_files=a.max_eqr_files),host=a.host,port=a.port);return
+        if a.command=='screen-eqr':
+            report=predictor.screen_eqr(a.directory,a.output,gaussian=a.gaussian,
+                                        batch_size=a.batch_size,overwrite=a.overwrite)
+            print(json.dumps(report,indent=2,ensure_ascii=False))
+            if report['status']=='no_valid_events':p.exit(2,'No valid events; see the rejected file for reasons.\n')
+            return
         data=synthetic_data() if a.command=='demo' else RFData.load(a.input)
         result=predictor.predict(data,batch_size=a.batch_size);result.to_csv(a.output,data.sample_ids)
         report=dict(output=str(a.output),records=len(data),method=result.method,seed=result.seed,threshold=result.threshold)
@@ -86,8 +100,10 @@ def main(argv=None):
             if data.labels is None:raise ValueError('--evaluate requires labels in the input')
             report['metrics']=evaluate(data.labels,result.p_good,result.threshold)
         print(json.dumps(report,indent=2))
-    except (ValueError,FileNotFoundError,FileExistsError) as exc:p.exit(2,f'Error: {exc}\n')
-    except KeyboardInterrupt:p.exit(130,'Training interrupted; repeat the same train command with --resume.\n')
+    except (ValueError,OSError) as exc:p.exit(2,f'Error: {exc}\n')
+    except KeyboardInterrupt:
+        message='Training interrupted; repeat the same train command with --resume.' if a.command=='train' else 'Interrupted.'
+        p.exit(130,message+'\n')
 
 
 if __name__=='__main__':main()

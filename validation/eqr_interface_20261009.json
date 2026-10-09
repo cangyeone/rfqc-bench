@@ -1,0 +1,22 @@
+{
+  "version": "0.1.2",
+  "tests_passed": 54,
+  "python": "3.14",
+  "torch": "2.11.0",
+  "private_fixture_check": {
+    "files": 224,
+    "events": 32,
+    "model": "reference_multifilter",
+    "seed": 20260928,
+    "weights_sha256": "bc62713fe2f251537bb5372ff82f8874bed907a806de6e0bdf93228cef13e08d",
+    "source_model_release": "v0.1.0",
+    "array_api_max_abs_probability_difference": 0.0,
+    "decisions_equal": true,
+    "observations_read_independently_with": "ObsPy",
+    "retained_paths_all_exist": true,
+    "source_sha256_all_unchanged": true,
+    "good_events": 7,
+    "retained_files": 49
+  },
+  "scope": "Software interface verification only, not an accuracy experiment or a claim that the data/label cohort is verified. New DB/YP training paused by user pending data review; no new training weights released."
+}

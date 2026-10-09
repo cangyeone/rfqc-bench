@@ -89,3 +89,28 @@ not fit weights or thresholds. FCM retains the full station pool and returns onl
 pool timing. For repeated fresh-process rounds and full definitions, see
 [BENCHMARK_zh.md](BENCHMARK_zh.md). Timings generated on new hardware are new
 measurements and do not replace the published snapshot.
+
+## SAC EQR directory screening (v0.1.2)
+
+```python
+from rfqc_bench import screen_eqr
+summary = screen_eqr("/path/to/all_eqr", output="results/record")
+# Or reuse a loaded predictor:
+summary = model.screen_eqr("/path/to/another_station")
+```
+
+`screen_eqr(directory, output=None, *, predictor=None, model='reference_multifilter',
+seed=None, model_dir=None, device='cpu', cache_dir=None, gaussian=None,
+batch_size=32, overwrite=False, max_files=None)` recursively reads binary SAC
+v6/v7 EQR files. The returned dictionary is also saved at `<output>.json`.
+Default output is `<directory>/record`, containing retained paths relative to the
+input directory, one per line. Prediction/provenance and rejection CSVs accompany
+it. No input file is rewritten. Identical event filenames in a station's AG
+directories identify filter views; multi-filter predictions allow missing views.
+Flat inputs require an explicit known `gaussian`. The observed input must cover
+P-referenced −10..40 s at 0.1 s. Existing outputs require a new name or explicit
+`overwrite=True`. Only waveform configurations are supported by this convenience
+interface; descriptors remain explicit inputs to `.predict()`.
+
+See [directory format and examples](EQR_SCREENING_zh.md). FCM is evaluated once
+per full station pool, irrespective of neural `batch_size`.
